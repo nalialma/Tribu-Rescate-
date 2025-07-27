@@ -1,0 +1,1424 @@
+/* === Reset básico === */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Colores personalizados === */
+:root {
+  --color-bg-main: #fef499;
+  --color-header: #4ca5c7;
+  --color-box: #e8b62b;
+  --color-cta: #c12c2e;
+  --color-menu-btn: #282d54;
+  --color-form-bg: #fffde5;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+ --color-input: #1f2a58;    /* Fondo inputs */
+  --color-cta: #c12c2e;      /* Botón rojo */
+}
+
+/* === Tipografías aplicadas === */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #0b090c;
+  background-color: var(--color-bg-main);
+  line-height: 1.6;
+}
+
+.site-title {
+  font-family: 'Truculenta', sans-serif;
+}
+
+.tagline {
+  font-family: 'Rock Salt', cursive;
+}
+
+.section-title {
+  font-family: 'Concierto One', sans-serif;
+}
+
+.menu-btn,
+.btn-whatsapp {
+  font-family: 'Truculenta', sans-serif;
+}
+
+.modal-title {
+  font-family: 'Concierto One', sans-serif;
+}
+
+input, select, button, textarea { font-family: 'Alumni Sans SC', sans-serif;
+  font-family: 'Alumni Sans SC', sans-serif;
+}
+
+/* === Header === */
+.header {
+  background-color: var(--color-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg);
+}
+
+.site-title {
+  color: #0b090c;
+  font-size: 1.5rem;
+}
+
+.tagline-wrapper {
+  position: relative;
+  width: 30%;
+  min-width: 100px;
+  height: 20px;
+  background-color: var(--color-form-bg);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.tagline {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  pointer-events: none;
+  z-index: 1;
+  position: relative;
+}
+
+.floating-pets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pet {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: floatPet 6s linear infinite;
+}
+
+.pet1 {
+  top: 10px;
+  left: 10px;
+  animation-delay: 0s;
+}
+
+.pet2 {
+  top: 20px;
+  left: 100px;
+  animation-delay: 2s;
+}
+
+.pet3 {
+  top: 30px;
+  left: 200px;
+  animation-delay: 4s;
+}
+
+@keyframes floatPet {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.cta-button {
+  background-color: var(--color-header);
+  color: white;
+  text-decoration: none;
+  padding: 0.60rem 1.0rem;
+  border-radius: 999px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--color-header);
+}
+
+/* === Layout de tres columnas === */
+.layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.sidebar {
+  width:100%;
+  background-color: var(--color-box);
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar .menu-btn {
+  display: block;
+  background-color: var(--color-menu-btn);
+  color: white;
+  text-align: left;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 100% ;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .menu-btn:hover {
+  background-color: #1e2957;
+}
+
+.content-scroll {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-cta) var(--color-form-bg);
+}
+
+
+/* === Construcción de Casitas === */
+.casitas-section {
+  background-color: var(--color-form-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.casitas-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background-color: var(--color-cta);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  width: max-content;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-whatsapp:hover {
+  background-color: #a32323;
+}
+
+/* === Columna derecha - Adopta/Apadrina/Pasea === */
+.sidebar-right {
+  width: 100%;
+  background-color: var(--color-box);
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.sidebar-right h3 {
+  font-family: 'Truculenta', sans-serif;
+  margin-bottom: 1rem;
+}
+.pet-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.5rem;
+}
+.pet-links img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.pet-links span {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+/* === Ventana Modal === */
+.modal-checkbox {
+  display: none;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+.modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-form-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  display: none;
+  z-index: 1000;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.modal-checkbox:checked ~ .modal-box {
+  display: block;
+}
+.modal-close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.whatsapp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+whatsapp-form input,
+.whatsapp-form select,
+.whatsapp-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-menu-btn);
+  color: var(--color-form-bg);
+}
+
+/* === Animaciones generales === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* === Footer === */
+.footer {
+  background-color: var(--color-header);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+/* === Botón Volver a Inicio === */
+.back-to-home {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--color-cta);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Truculenta', sans-serif;
+  box-shadow: 0 4px 6px var(--shadow-light);
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+  background-color: var(--color-header);
+}
+.featured-section {
+  margin-bottom: 2rem;
+}
+
+.featured-box
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 600px;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+
+.featured-media {
+  width: 100%;
+  padding: 5px;
+  background-color: #fffde5;
+}
+
+.featured-media video,
+.featured-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.featured-description {
+  padding: 1rem;
+  background-color: var(--color-form-bg);
+  color: #0b090c;
+}
+
+.featured-description h3 {
+  font-family: 'Truculenta', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-description p {
+ font-family: "Truculenta"; font-size: 0.95rem;
+}
+/* === Imagen fija - Construcción de Casitas === */
+.casitas-img-fixed {
+  width: 200px; /* Ancho fijo */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  display: block;
+}
+/* === Ventana Modal Centrada === */
+.modal-checkbox {
+  display: none;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+  z-index: 998;
+}
+
+.modal-box {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-form-bg); /* Color principal del modal (#fffde5) */
+  color: #0b090c; /* Texto oscuro */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  z-index: 999;
+  display: none;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.modal-checkbox:checked ~ .modal-box {
+  display: block;
+}
+
+.modal-close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #0b090c;
+}
+
+.modal-title {
+  font-family: 'Concierto One', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.whatsapp-form input,
+.whatsapp-form select,
+.whatsapp-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-input); /* Fondo del input (#1f2a58) */
+  color: var(--color-form-bg); /* Texto claro (#fffde5) */
+}
+
+.whatsapp-form button,
+.btn-whatsapp {
+  background-color: var(--color-cta); /* Botones principales (#c12c2e) */
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.whatsapp-form button:hover,
+.btn-whatsapp:hover {
+  background-color: #a32323;
+}
+
+/* === Animación suave al abrir === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* === Animaciones en botones del menú === */
+.menu-btn {
+  display: block;
+  background-color: var(--color-menu-btn); /* #282d54 */
+  color: white;
+  text-align: left;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Truculenta', sans-serif;
+}
+
+.menu-btn:hover,
+.menu-btn:focus {
+  background-color: var(--color-hover); /* #1e2957 */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+>
+    </aside>
+
+
+    /* === Sección de colegas === */
+
+    /* === Tipografías aplicadas === */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #0b090c;
+  background-color: var(--color-bg-main);
+  line-height: 1.6;
+}
+
+.site-title {
+  font-family: 'Truculenta', sans-serif;
+}
+
+.tagline {
+  font-family: 'Rock Salt', cursive;
+}
+
+.section-title {
+  font-family: 'Concierto One', sans-serif;
+}
+
+.menu-btn,
+.btn-whatsapp {
+  font-family: 'Truculenta', sans-serif;
+}
+
+.modal-title {
+  font-family: 'Concierto One', sans-serif;
+}
+
+input, select, button, textarea { font-family: 'Alumni Sans SC', sans-serif;
+  font-family: 'Alumni Sans SC', sans-serif;
+}
+
+/* === Header === */
+.header {
+  background-color: var(--color-cta);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 1000;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: rotate(-5deg);
+}
+
+.site-title {
+  color: #0b090c;
+  font-size: 1.5rem;
+}
+
+.tagline-wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 100px;
+  height: 40px;
+  background-color: var(--color-box);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: white;
+  pointer-events: none;
+  z-index: 1;
+  position: relative;
+  font-family:url(tipografias/RockSalt-Regular/RockSalt-Regular.ttf) ;
+
+}
+
+.call-to-colega {
+  margin-bottom: 2rem;
+  font-family: "truculenta";
+}
+
+.call-to-colega h2.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.colega-form {
+  background-color: #fffde5;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.colega-form label {
+  font-weight: bold;
+}
+
+.colega-form input,
+.colega-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1f2a58;
+  color: #fffde5;
+}
+
+.colega-form button {
+  align-self: center;
+  width: max-content;
+}
+
+
+/* === Layout de tres columnas - versión colegas === */
+.layout-colegas {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 70px;
+}
+
+.sidebar-small {
+  width: 100%;
+  background-color:#282d54 var(--color-menu-btn); /* #282d54 */
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.sidebar-small .menu-btn {
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+/* === Colores de Marca === */
+:root {
+  --color-bg-main: #fef499;
+  --color-header: #4ca5c7; /* Fondo celeste para círculos */
+  --color-box: #e8b62b;
+  --color-cta: #c12c2e; /* Botón rojo */
+  --color-menu-btn: #282d54;
+  --color-form-bg: #fffde5;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --color-input: #1f2a58;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #0b090c;
+    background-color: var(--color-bg-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Título con imagen animada */
+.titulo-con-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.animacion-mascotas {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.section-title {
+    font-family: 'Truculenta', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.call-to-action {
+    background-color: var(--color-box);
+    padding: 40px 20px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    text-align: center;
+}
+
+/* Colegas - Carrusel estilo grid de 3 columnas */
+.colegas-carrusel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.colleague-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px var(--shadow-light);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.colleague-card:hover {
+    transform: scale(1.05);
+}
+
+.circle-img {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    border: 3px solid var(--color-header);
+    background-color: var(--color-header); /* Fondo celeste debajo de la imagen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+}
+
+.colleague-info h4 {
+    font-family: 'Concierto One', sans-serif;
+    margin-bottom: 10px;
+}
+
+.colleague-info p {
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    background-color: var(--color-cta);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Alumni Sans SC', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #a00;
+}
+
+/* Modal Formulario */
+.modal-overlay {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay label.modal-close {
+    position: fixed;
+left: 50%;
+    top: 50%;
+    inset: 0;
+    cursor: default;
+}
+
+#modal-toggle:checked ~ .modal-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--color-form-bg);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.modal-title {
+    font-family: 'Concierto One', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-cta);
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-size: 1rem;
+    color: var(--color-input);
+}
+
+.modal-content button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Botón cerrar modal */
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+/* === Columna derecha - Noticias de animales === */
+.sidebar-news {
+  width: 100%;
+  background-color: var(--color-box); /* #e8b62b */
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 80px;
+  height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+.sidebar-news h3 {
+  font-family: 'Truculenta', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.news-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.news-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.news-links a:hover {
+  transform: translateX(5px);
+}
+
+.news-links img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.news-links span {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+/* === Botón "Únete a la causa" abajo del scroll === */
+.whatsapp-bottom {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* === Ventana Modal Centrada === */
+.modal-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffde5;
+  color: #0b090c;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.modal-checkbox:checked ~ .modal-box {
+  display: block;
+}
+
+.modal-close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.modal-title {
+  font-family: 'Concierto One', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #1f2a58;
+  color: #fffde5;
+  font-family: 'Alumni Sans SC', sans-serif;
+}
+
+.registration-form select {
+  appearance: auto;
+  -webkit-appearance: menulist;
+}
+
+.registration-form button,
+.registration-form .btn-whatsapp {
+  background-color: #c12c2e;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  font-family: 'Truculenta', sans-serif;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.registration-form button:hover,
+.registration-form .btn-whatsapp:hover {
+  background-color: #a32323;
+}
+
+/* === Animación de entrada === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tagline-wrapper {
+  position: relative;
+  width: 40%;
+  min-width: 200px;
+  height: 40px;
+  background-color: var(--color-box);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: white;
+  pointer-events: none;
+  z-index: 1;
+  position: relative;
+  font-family: truculenta;
+}
+/* === Sección de Objetivos === */
+.objectives-section {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.objective-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #0b090c;
+}
+
+.objective-text h3 {
+  margin-top: 2rem;
+  font-family: 'Truculenta', sans-serif;
+  font-size: 1.3rem;
+}
+
+.objective-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.objective-text li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.objective-text li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-cta); /* Rojo */
+}
+
+/* === Botón Investigaciones === */
+.investigaciones-box {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-investigaciones {
+  display: inline-block;
+  background-color: var(--color-cta); /* Rojo */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: 'Truculenta', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-investigaciones:hover {
+  background-color: #a32323;
+}
+
+/* === Redes sociales === */
+.social-links {
+  margin-top: 2rem;
+  background-color: #fffde5;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-links h3 {
+  font-family: 'Truculenta', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: block;
+  padding: 0.75rem;
+  background-color: var(--color-menu-btn); /* #282d54 */
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #1e2957;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-right {
+    width: 100%;
+  }
+}
+
+/* === Sección de investigación === */
+.layout-investigacion {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+.sidebar-left {
+  width: 200px;
+  background-color: var(--color-menu-btn); /* #282d54 */
+  color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.sidebar-left h4 {
+  font-family: 'Truculenta', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.sidebar-left .menu-btn {
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.content-scroll {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-cta) var(--color-form-bg);
+}
+
+.research-section {
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.section-title {
+  font-family: 'Concierto One', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.author-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* === Tablas de datos === */
+.causas-table,
+.barreras-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.causas-table th,
+.causas-table td,
+.barreras-table th,
+.barreras-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  background-color: #f9f9f9;
+}
+
+.causas-table th,
+.barreras-table th {
+  background-color: var(--color-box); /* #e8b62b */
+  text-align: left;
+}
+
+.example-video {
+  margin-top: 1rem;
+}
+
+.example-video video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.sources-section {
+  margin-top: 2rem;
+  background-color: #fffde5;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.sources-section h3 {
+  font-family: 'Truculenta', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.sources-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.sources-section li {
+  margin-bottom: 0.5rem;
+}
+
+.sources-section a {
+  color: var(--color-cta);
+  text-decoration: underline;
+}
+
+/* === Botón Investigaciones === */
+.btn-research {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn-whatsapp.mid {
+  background-color: white;
+  color: #c12c2e;
+  font-weight: bold;
+}
+
+.btn-whatsapp.mid:hover {
+  background-color: #fcd7d7;
+}
+
+/* === Redes sociales === */
+.social-links {
+  background-color: var(--color-box);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-links h3 {
+  font-family: 'Truculenta', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-icons a {
+  display: block;
+  padding: 0.75rem;
+  background-color: var(--color-menu-btn); /* #282d54 */
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #1e2957;
+}
+
+/* === Columna derecha - Adopta/Apadrina/Pasea === */
+.sidebar-right {
+  width: 100%;
+  background-color: var(--color-box);
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+.pet-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.5rem;
+}
+
+.pet-links img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.pet-links span {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+/* === Perritos al pasar el mouse === */
+.floating-pets {
+  position: fixed;
+  pointer-events: none;
+  top: 20%;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.floating-pet {
+  width: 50px;
+  height: auto;
+  opacity: 0.8;
+  animation: floatPet 6s linear infinite;
+}
+
+.pet1 { animation-delay: 0s; }
+.pet2 { animation-delay: 2s; }
+.pet3 { animation-delay: 4s; }
+
+@keyframes floatPet {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+/* === Animación de entrada === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

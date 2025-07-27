@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tribu Rescate | Salta</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&family=Rock+Salt&family=Concierto+One&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <meta name="description" content="Tribu Rescate es una organización dedicada al rescate y protección animal en Salta, Argentina. Únete como voluntario, adopta, dona o apadrina un animal hoy.">
+</head>
+<body>
+
+  <!--Checkbox para abrir ventana modal --> 
+ <input type="checkbox" id="modal-toggle" class="modal-checkbox">
+<label for="modal-toggle" class="modal-overlay"></label>
+<div class="modal-box">
+  <!-- Aquí va el contenido del formulario -->
+</div>
+  <!-- Aquí va el contenido del formulario -->
+</div>
+
+  <!-- Header con animación de mascotas -->
+  <header class="header">
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
+      </a>
+      <h1 class="site-title">Tribu Rescate</h1>
+    </div>
+    <div class="tagline-wrapper">
+      <p class="tagline">Todos somos parte del cambio</p>
+      <div class="floating-pets">
+        <img src="IMG/perro1.jpg" alt="Perrito flotante" class="pet pet1">
+        <img src="IMG/IMG-BABYDOG.jpg" alt="Gatito flotante" class="pet pet2">
+        <img src="IMG/perro2.jpg" alt="Perrito pequeño" class="pet pet3">
+      </div>
+    </div>
+    <!-- Botón Regístrate como voluntario -->
+<label for="modal-toggle" class="cta-button">Regístrate como voluntario</label>
+ <!-- Ventana Modal - Registro -->
+  <label for="modal-toggle" class="modal-overlay"></label>
+  <div class="modal-box">
+    <label for="modal-toggle" class="modal-close">&times;</label>
+    <h2 class="modal-title">Regístrate como Voluntario</h2>
+    <form action="mailto:tunombre@email.com" method="POST" enctype="text/plain" class="whatsapp-form">
+      <label>Nombre completo:</label>
+      <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required />
+
+      <label>Nick:</label>
+      <input type="text" name="nick" placeholder="Tu apodo" required />
+
+      <label>Edad:</label>
+      <input type="number" name="edad" placeholder="Ej: 28" required />
+
+      <label>Disponibilidad:</label>
+      <select name="disponibilidad" required>
+        <option value="">Selecciona</option>
+        <option value="Completo">Tiempo Completo</option>
+        <option value="Parcial">Tiempo Parcial</option>
+        <option value="Finde">Solo fines de semana</option>
+      </select>
+
+      <label>¿Dónde vivís?</label>
+      <input type="text" name="provincia" placeholder="Ej: Salta Capital" required />
+
+      <label>Cuéntanos sobre ti:</label>
+      <textarea name="sobre-ti" rows="4" placeholder="¿Qué te motiva a ser voluntario?"></textarea>
+
+      <button type="submit" class="btn-whatsapp">Enviar por correo</button>
+      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-whatsapp">Unirse al grupo de WhatsApp</a>
+    </form>
+  </div>
+
+  </header>
+
+  <!-- Layout de tres columnas -->
+  <div class="layout">
+
+    <!-- Menú izquierdo -->
+    <aside class="sidebar">
+      <nav>
+        <a href="objetivos.html" class="menu-btn">Objetivos</a>
+        <a href="vision.html" class="menu-btn">Visión</a>
+        <a href="colegas.html" class="menu-btn">Colegas</a>
+        <a href="dona.html" class="menu-btn">Dona</a>
+        <a href="adopta.html" class="menu-btn">Adopta</a>
+        <a href="apadrina.html" class="menu-btn">Apadrina</a>
+        <a href="pasea.html" class="menu-btn">Pasea un perrito</a>
+        <a href="educacion.html" class="menu-btn">Educación</a>
+        <a href="contactos.html" class="menu-btn">Contactos veterinarios</a>
+        <a href="voluntariado.html" class="menu-btn">Voluntariado</a>
+      </nav>
+    </aside>
+
+    <!-- Contenido central scrollable -->
+    <main class="content-scroll">
+<!-- Sección destacada video + descripción -->
+<section class="featured-section">
+  <div class="featured-box">
+    <div class="featured-media">
+      
+
+      <video controls>
+        <source src="VDO/VDO-ANGEL1.mp4" type="video/mp4" />
+        Tu navegador no soporta el elemento video.
+      </video>
+    </div>
+    <div class="featured-description">
+      <h3>Conoce a Ángel</h3>
+      <h2>
+        Un pitbull anciano que no conoce el amor
+      </h2>
+      <p>Ángel estubo encerrado por más de un año en una habitacion, fue rescatado en Zona san Javier, sudeste de Salta, Actualmente ya paso por 5 hogares provisorios, y aun no consigue un hogar estable. Busca una familia amorosa. Únete a nosotros para ayudarlo a encontrar un hogar seguro.</p>
+       <p>Si Estás interesado en adoptar a Angel.Comunicate por privado</p>
+        <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-whatsapp">Unirse al grupo de WhatsApp</a>
+    </div>
+  </div>
+</section>
+  
+
+      <!-- Construcción de Casitas -->
+      <section class="casitas-section">
+        <h3>Construcción de Casitas</h3>
+        <img src="IMG/construccion de casitas.jpg" alt="Construcción de casitas" class="casitas-img" />
+        <p>Vos también podés formar parte. Únete a nuestra causa.</p>
+        <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-whatsapp">Unirse al grupo de WhatsApp</a>
+      </section>
+    
+
+
+    </main>
+<!-- Columna derecha - <!-Adopta/Apadrina/Pasea -->
+    <aside class="sidebar-right">
+      <h3>Colabora con:</h3>
+      <div class="pet-links">
+        <a target="_blank"
+       href="https://www.tiktok.com/@a.p.salta/video/7470895480935927046?lang=es-419">
+          <img src="IMG/IMG-ANGEL2.jpg" alt="Adopta">
+          <span>Adopta</span>
+        </a>
+        <a target="_blank" href="apadrina.html">
+          <img src="IMG/IMG-Dogsgroups.jpg" alt="Apadrina">
+          <span>Apadrina</span>
+        </a>
+       
+         <a target="_blank" href="//www.facebook.com/share/p/18PBaEbi8t/">
+          <img src="IMG/perrito-tirado.jpg" alt="Adopta un cachorro">
+          <span>Adopta un cahorro</span>
+
+           <a target="_blank" href="https://www.facebook.com/share/p/1FKpo4btxH/">
+          <img src="IMG/TEO-Callejeritosalta.jpg" alt="Adopta un amigo">
+          <span>Adopta un perrito</span>
+           <a target = "_blank"  href="https://www.facebook.com/share/p/1EymzNvBBV/">
+          <img src="IMG/gatito-babyCallejeritossalta.jpg" alt="Adopta un cachorro">
+          <span>Conviertete en un Karen</span>
+
+           <a  target="_blank" href="https://www.facebook.com/share/p/19jZAimCGx/">
+          <img src="IMG/ajuya-dogpitbull.jpg" alt="Adopta un cachorro">
+          <span>Adopta un perrito</span>
+           <a target="_blank"  href="https://www.facebook.com/share/p/16RNKv86p1/">
+          <img src="IMG/baby-ajuya-dog.jpg" alt="Adopta un cachorro">
+          <span>Adopta un perrito</span>
+        </a>
+        
+      </div>
+    </aside>
+
+  </div>
+
+    
+<!-- Overlay negro transparente -->
+<label for="modal-toggle" class="modal-overlay"></label>
+
+<!-- Formulario Centrado -->
+<div class="modal-box">
+  <label for="modal-toggle" class="modal-close">&times;</label>
+  <h2 class="modal-title">Regístrate como Voluntario</h2>
+
+  <!-- Formulario real -->
+  <form action="mailto:tunombre@email.com" method="POST" enctype="text/plain" class="registration-form">
+    <label>Nombre y Apellido:</label>
+    <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required />
+
+    <label>Edad:</label>
+    <select name="edad" required>
+      <option value="">Selecciona tu edad</option>
+      <!-- Opciones del 1 al 100 -->
+      <!-- Puedes usar JavaScript después para generar esto dinámicamente -->
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <!-- ... hasta 100 -->
+      <option value="100">100</option>
+    </select>
+
+    <label>¿Dónde vives?</label>
+    <input type="text" name="provincia" placeholder="Ej: Salta Capital" required />
+
+    <label>Cuéntanos sobre ti:</label>
+    <textarea name="sobre-ti" rows="4" placeholder="¿Qué te motiva a ser voluntario?"></textarea>
+
+    <label>Adjunta una foto de perfil:</label>
+    <input type="file" name="fotoPerfil" accept="image/*" />
+
+    <label>Red social:</label>
+    <input type="text" name="red-social" placeholder="Instagram / TikTok / Facebook" />
+
+    <!-- Botón WhatsApp con imagen y tooltip -->
+    <div class="whatsapp-link">
+      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw"  target="_blank">
+        <img src="IMG/whatsapp-logo.png" alt="Únete al grupo de WhatsApp" class="whatsapp-icon">
+        <span class="tooltip">Grupo de WhatsApp</span>
+      </a>
+    </div>
+
+    <button type="submit" class="btn-whatsapp">Enviar</button>
+  </form>
+</div>
+
+</body>
+</html>
