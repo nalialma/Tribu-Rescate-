@@ -1,34 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Adopta | Tribu Rescate</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-mejorado.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&family=Rock+Salt&family=Concierto+One&family=Josefin+Sans&family=Alumni+Sans+SC&display=swap" rel="stylesheet">
+  <style>
+    .priority-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+    .adoption-card { background: white; border-radius: 15px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .adoption-card:hover { transform: scale(1.05); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+    .adoption-image { width: 100%; height: 200px; background: linear-gradient(135deg, #4ca5c7, #e8b62b); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin-bottom: 1rem; }
+    .adoption-info h4 { font-family: 'Truculenta', sans-serif; color: #4ca5c7; margin-bottom: 0.5rem; }
+    .adoption-info p { font-size: 0.95rem; color: #666; margin-bottom: 0.5rem; }
+    .badge { display: inline-block; background: #e8b62b; color: white; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; margin-bottom: 1rem; }
+    .btn-adoptar { display: inline-block; background: #c12c2e; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; transition: all 0.3s ease; margin-top: 1rem; }
+    .btn-adoptar:hover { background: #a32323; transform: translateY(-2px); }
+  </style>
 </head>
-<body class="inverted">
+<body>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="logo-container">
-      <a href="index.html">
-        <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
-      </a>
-      <h1 class="site-title">Tribu Rescate - Adopta</h1>
+      <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
+      <h1 class="site-title">Tribu Rescate</h1>
     </div>
-    <p class="tagline">Encuentra una familia para ellos</p>
+    <div class="header-right">
+      <button class="cta-button" onclick="window.location.href='index-mejorado.html'">← Volver</button>
+    </div>
   </header>
 
-  <main class="main-content">
-    <section class="content-grid">
-      <div class="box box-center">
-        <h2 class="page-title">Animales en adopción</h2>
-        <p>Estos son algunos de los animales esperando un hogar:</p>
-        <p><a href="index.html" class="back-to-home">← Volver a inicio</a></p>
+  <!-- FONDO -->
+  <div class="paw-background">
+    <div class="paw paw-dog" style="top: 10%; left: 5%;">🐾</div>
+    <div class="paw paw-cat" style="top: 80%; right: 10%;">🐾</div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>🏠 Adopta - Cambia Una Vida</h2>
+        <p>Decenas de perros y gatos esperan un hogar donde ser amados</p>
+        <p style="font-size: 1.2rem; margin-top: 1rem;">Cada adopción es una segunda oportunidad 🐾</p>
       </div>
     </section>
+
+    <!-- INFORMACIÓN IMPORTANTE -->
+    <section class="priority-grid" style="margin-bottom: 3rem;">
+      <div class="priority-card">
+        <div class="priority-card-icon">✅</div>
+        <h3>¿Cómo Adoptar?</h3>
+        <p>Contáctanos a través de WhatsApp, Facebook o presentándote en nuestro Centro Mancilla. El proceso es simple y rápido.</p>
+      </div>
+
+      <div class="priority-card">
+        <div class="priority-card-icon">📋</div>
+        <h3>Requisitos</h3>
+        <p>Ser mayor de edad, tener hogar estable y demostrar capacidad de cuidar al animal. Hacemos seguimiento post-adopción.</p>
+      </div>
+
+      <div class="priority-card">
+        <div class="priority-card-icon">💖</div>
+        <h3>Responsabilidades</h3>
+        <p>Alimento, agua, veterinaria, castración, identificación con microchip y mucho amor. ¡Lo merece!</p>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO DE ANIMALES -->
+    <h2 class="section-title" style="background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: #4ca5c7;">🐕 Nuestros Rescatados Esperan</h2>
+
+    <section class="priority-grid">
+      
+      <!-- ANIMAL 1 -->
+      <div class="adoption-card">
+        <div class="adoption-image">🐕</div>
+        <div class="adoption-info">
+          <span class="badge">Macho • 3 años</span>
+          <h4>Ángel</h4>
+          <p><strong>Raza:</strong> Pitbull mix</p>
+          <p><strong>Tamaño:</strong> Grande</p>
+          <p><strong>Temperamento:</strong> Cariñoso, necesita paciencia</p>
+          <p>Pitbull anciano rescatado. Busca familia amorosa para sus últimos años.</p>
+          <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-adoptar">Contactar sobre Ángel</a>
+        </div>
+      </div>
+
+      <!-- ANIMAL 2 -->
+      <div class="adoption-card">
+        <div class="adoption-image">🐈</div>
+        <div class="adoption-info">
+          <span class="badge">Hembra • 2 años</span>
+          <h4>Luna</h4>
+          <p><strong>Raza:</strong> Gato doméstico</p>
+          <p><strong>Tamaño:</strong> Pequeño</p>
+          <p><strong>Temperamento:</strong> Juguetona, sociable</p>
+          <p>Gatita rescatada en la calle. Muy cariñosa y juguetona con niños.</p>
+          <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-adoptar">Quiero a Luna</a>
+        </div>
+      </div>
+
+      <!-- ANIMAL 3 -->
+      <div class="adoption-card">
+        <div class="adoption-image">🐕‍🦺</div>
+        <div class="adoption-info">
+          <span class="badge">Macho • 1 año</span>
+          <h4>Max</h4>
+          <p><strong>Raza:</strong> Pastor mix</p>
+          <p><strong>Tamaño:</strong> Mediano</p>
+          <p><strong>Temperamento:</strong> Energético, leal</p>
+          <p>Perro joven y lleno de vida. Perfecto para familias activas.</p>
+          <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-adoptar">Conocer a Max</a>
+        </div>
+      </div>
+
+      <!-- ANIMAL 4 -->
+      <div class="adoption-card">
+        <div class="adoption-image">🐈‍⬛</div>
+        <div class="adoption-info">
+          <span class="badge">Macho • 5 meses</span>
+          <h4>Negrito</h4>
+          <p><strong>Raza:</strong> Gato doméstico</p>
+          <p><strong>Tamaño:</strong> Pequeño</p>
+          <p><strong>Temperamento:</strong> Cariñoso, tranquilo</p>
+          <p>Gatito bebé rescatado en barrio. Súper tierno y dócil.</p>
+          <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-adoptar">Adoptar a Negrito</a>
+        </div>
+      </div>
+
+      <!-- ANIMAL 5 -->
+      <div class="adoption-card">
+        <div class="adoption-image">🐕</div>
+        <div class="adoption-info">
+          <span class="badge">Hembra • 4 años</span>
+          <h4>Bella</h4>
+          <p><strong>Raza:</strong> Criollo</p>
+          <p><strong>Tamaño:</strong> Mediano</p>
+          <p><strong>Temperamento:</strong> Gentil, protectora</p>
+          <p>Perrita adulta muy buena con niños y otros animales.</p>
+          <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-adoptar">Adoptar a Bella</a>
+        </div>
+      </div>
+
+      <!-- ANIMAL 6 -->
+      <div class="adoption-card">
+        <div class="adoption-image">🐕‍🦺</div>
+        <div class="adoption-info">
+          <span class="badge">Macho • 2 años</span>
+          <h4>Rocky</h4>
+          <p><strong>Raza:</strong> Mestizo</p>
+          <p><strong>Tamaño:</strong> Grande</p>
+          <p><strong>Temperamento:</strong> Amigable, inteligente</p>
+          <p>Perro inteligente que aprende rápido. Ideal para familias.</p>
+          <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-adoptar">Conocer a Rocky</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PROCESO DE ADOPCIÓN -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin: 3rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="font-family: 'Truculenta', sans-serif; color: #4ca5c7; margin-bottom: 1.5rem; text-align: center;">📋 Proceso de Adopción - Paso a Paso</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #4ca5c7; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">1️⃣</div>
+          <h4 style="color: #4ca5c7; margin-bottom: 0.5rem;">Contacto</h4>
+          <p>Comunicate por WhatsApp o Facebook</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #e8b62b; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">2️⃣</div>
+          <h4 style="color: #e8b62b; margin-bottom: 0.5rem;">Entrevista</h4>
+          <p>Conversamos sobre tus capacidades</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #c12c2e; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">3️⃣</div>
+          <h4 style="color: #c12c2e; margin-bottom: 0.5rem;">Conocer</h4>
+          <p>Visitas al animal en refugio</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #4ca5c7; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">4️⃣</div>
+          <h4 style="color: #4ca5c7; margin-bottom: 0.5rem;">Adopción</h4>
+          <p>Firmamos contrato de responsabilidad</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #e8b62b; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">5️⃣</div>
+          <h4 style="color: #e8b62b; margin-bottom: 0.5rem;">Seguimiento</h4>
+          <p>Hacemos seguimiento post-adopción</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #c12c2e; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">6️⃣</div>
+          <h4 style="color: #c12c2e; margin-bottom: 0.5rem;">¡Felicidad!</h4>
+          <p>Juntos, cambiamos dos vidas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin: 3rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="font-family: 'Truculenta', sans-serif; color: #4ca5c7; margin-bottom: 1.5rem;">❓ Preguntas Frecuentes</h3>
+      
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="border-left: 4px solid #4ca5c7; padding-left: 1rem;">
+          <h4 style="color: #4ca5c7;">¿Cuál es el costo de la adopción?</h4>
+          <p>La adopción es GRATIS. Solo pedimos que el animal tenga cuidado responsable.</p>
+        </div>
+
+        <div style="border-left: 4px solid #4ca5c7; padding-left: 1rem;">
+          <h4 style="color: #4ca5c7;">¿Puedo devolver el animal?</h4>
+          <p>Siempre podés contactarnos si necesitas ayuda. Trabajamos para que la adopción funcione.</p>
+        </div>
+
+        <div style="border-left: 4px solid #4ca5c7; padding-left: 1rem;">
+          <h4 style="color: #4ca5c7;">¿El animal está vacunado?</h4>
+          <p>Sí, todos nuestros animales están vacunados y desparasitados.</p>
+        </div>
+
+        <div style="border-left: 4px solid #4ca5c7; padding-left: 1rem;">
+          <h4 style="color: #4ca5c7;">¿Hacen esterilización?</h4>
+          <p>Sí, esterilizamos antes de la adopción (o coordinamos después).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN -->
+    <section style="background: linear-gradient(135deg, #4ca5c7, #e8b62b); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin: 3rem 0;">
+      <h2 style="font-family: 'Truculenta', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">¿Listo para Adoptar?</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Contáctanos hoy mismo. ¡Hay un animal esperándote!</p>
+      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" style="display: inline-block; background: white; color: #4ca5c7; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-family: 'Truculenta', sans-serif; font-size: 1.1rem; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        💬 Contáctanos por WhatsApp
+      </a>
+    </section>
+
   </main>
 
-<a href="index.html" class="back-to-home">← Volver a Inicio</a>
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 Tribu Rescate - Todos los derechos reservados</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>🏠 Adopta</h3>
+        <p>Encuentra tu compañero perfecto. Cada adopción es una vida salvada.</p>
+      </div>
+      <div class="footer-section">
+        <h3>📍 Ubicación</h3>
+        <p>Centro de Adopciones Mancilla<br>Salta Capital, Argentina</p>
+      </div>
+      <div class="footer-section">
+        <h3>📞 Contacto</h3>
+        <p><a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank">WhatsApp 24/7</a></p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+      © 2025 Tribu Rescate - Salvando vidas, una patita a la vez 🐾
+    </p>
   </footer>
 
 </body>
