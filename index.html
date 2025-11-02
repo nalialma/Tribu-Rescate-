@@ -2,219 +2,426 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tribu Rescate | Salta</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&family=Rock+Salt&family=Concierto+One&family=Josefin+Sans&display=swap" rel="stylesheet">
-  <meta name="description" content="Tribu Rescate es una organización dedicada al rescate y protección animal en Salta, Argentina. Únete como voluntario, adopta, dona o apadrina un animal hoy.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto de Ley Popular | Tribu Rescate</title>
+  <link rel="stylesheet" href="style-mejorado.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&family=Rock+Salt&family=Concierto+One&family=Josefin+Sans&family=Alumni+Sans+SC&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!--Checkbox para abrir ventana modal --> 
- <input type="checkbox" id="modal-toggle" class="modal-checkbox">
-<label for="modal-toggle" class="modal-overlay"></label>
-<div class="modal-box">
-
-</div>
-
-</div>
-
-  <!-- Header con animación de mascotas -->
+  <!-- HEADER -->
   <header class="header">
     <div class="logo-container">
-      <a href="index.html">
-        <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
-      </a>
+      <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
       <h1 class="site-title">Tribu Rescate</h1>
     </div>
-    <div class="tagline-wrapper">
-      <p class="tagline">Todos somos parte del cambio</p>
-      <div class="floating-pets">
-        <img src="IMG/perro1.jpg" alt="Perrito flotante" class="pet pet1">
-        <img src="IMG/IMG-BABYDOG.jpg" alt="Gatito flotante" class="pet pet2">
-        <img src="IMG/perro2.jpg" alt="Perrito pequeño" class="pet pet3">
-      </div>
+    <div class="header-right">
+      <button class="cta-button" onclick="window.location.href='index-mejorado.html'">← Volver</button>
     </div>
-    <!-- Botón Regístrate como voluntario -->
-<label for="modal-toggle" class="cta-button">Regístrate como voluntario</label>
- <!-- Ventana Modal - Registro -->
-  <label for="modal-toggle" class="modal-overlay"></label>
-  <div class="modal-box">
-    <label for="modal-toggle" class="modal-close">&times;</label>
-    <h2 class="modal-title">Regístrate como Voluntario</h2>
-    <form action="mailto:tunombre@email.com" method="POST" enctype="text/plain" class="whatsapp-form">
-      <label>Nombre completo:</label>
-      <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required />
-
-      <label>Nick:</label>
-      <input type="text" name="nick" placeholder="Tu apodo" required />
-
-      <label>Edad:</label>
-      <input type="number" name="edad" placeholder="Ej: 28" required />
-
-      <label>Disponibilidad:</label>
-      <select name="disponibilidad" required>
-        <option value="">Selecciona</option>
-        <option value="Completo">Tiempo Completo</option>
-        <option value="Parcial">Tiempo Parcial</option>
-        <option value="Finde">Solo fines de semana</option>
-      </select>
-
-      <label>¿Dónde vivís?</label>
-      <input type="text" name="provincia" placeholder="Ej: Salta Capital" required />
-
-      <label>Cuéntanos sobre ti:</label>
-      <textarea name="sobre-ti" rows="4" placeholder="¿Qué te motiva a ser voluntario?"></textarea>
-
-      <button type="submit" class="btn-whatsapp">Enviar por correo</button>
-      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-whatsapp">Unirse al grupo de WhatsApp</a>
-    </form>
-  </div>
-
   </header>
 
-
-  <div class="layout">
-
-    <!-- Menú izquierdo -->
-    <aside class="sidebar">
-      <nav>
-        <a href="objetivos.html" class="menu-btn">Objetivos</a>
-        <a href="vision.html" class="menu-btn">Visión</a>
-        <a href="colegas.html" class="menu-btn">Colegas</a>
-        <a href="dona.html" class="menu-btn">Dona</a>
-        <a href="adopta.html" class="menu-btn">Adopta</a>
-        <a href="apadrina.html" class="menu-btn">Apadrina</a>
-        <a href="pasea.html" class="menu-btn">Pasea un perrito</a>
-        <a href="educacion.html" class="menu-btn">Educación</a>
-        <a href="contactos.html" class="menu-btn">Contactos veterinarios</a>
-        <a href="voluntariado.html" class="menu-btn">Voluntariado</a>
-      </nav>
-    </aside>
-
-  
-    <main class="content-scroll">
-
-<section class="featured-section">
-  <div class="featured-box">
-    <div class="featured-media">
-      
-
-      <video controls>
-        <source src="VDO/VDO-ANGEL1.mp4" type="video/mp4" />
-        Tu navegador no soporta el elemento video.
-      </video>
-    </div>
-    <div class="featured-description">
-      <h3>Conoce a Ángel</h3>
-      <h2>
-        Un pitbull anciano que no conoce el amor
-      </h2>
-      <p>Ángel estubo encerrado por más de un año en una habitacion, fue rescatado en Zona san Javier, sudeste de Salta, Actualmente ya paso por 5 hogares provisorios, y aun no consigue un hogar estable. Busca una familia amorosa. Únete a nosotros para ayudarlo a encontrar un hogar seguro.</p>
-       <p>Si Estás interesado en adoptar a Angel.Comunicate por privado</p>
-        <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-whatsapp">Unirse al grupo de WhatsApp</a>
-    </div>
+  <!-- FONDO -->
+  <div class="paw-background">
+    <div class="paw paw-dog" style="top: 10%; left: 5%;">🐾</div>
+    <div class="paw paw-cat" style="top: 80%; right: 10%;">🐾</div>
   </div>
-</section>
-  
 
-      <!-- Construcción de Casitas -->
-      <section class="casitas-section">
-        <h3>Construcción de Casitas</h3>
-        <img src="IMG/construccion de casitas.jpg" alt="Construcción de casitas" class="casitas-img" />
-        <p>Vos también podés formar parte. Únete a nuestra causa.</p>
-        <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" class="btn-whatsapp">Unirse al grupo de WhatsApp</a>
-      </section>
-    
+  <main>
 
-
-    </main>
-<!-- Columna derecha - <!-Adopta/Apadrina/Pasea -->
-    <aside class="sidebar-right">
-      <h3>Colabora con:</h3>
-      <div class="pet-links">
-        <a target="_blank"
-       href="https://www.tiktok.com/@a.p.salta/video/7470895480935927046?lang=es-419">
-          <img src="IMG/IMG-ANGEL2.jpg" alt="Adopta">
-          <span>Adopta</span>
-        </a>
-        <a target="_blank" href="apadrina.html">
-          <img src="IMG/IMG-Dogsgroups.jpg" alt="Apadrina">
-          <span>Apadrina</span>
-        </a>
-       
-         <a target="_blank" href="//www.facebook.com/share/p/18PBaEbi8t/">
-          <img src="IMG/perrito-tirado.jpg" alt="Adopta un cachorro">
-          <span>Adopta un cahorro</span>
-
-           <a target="_blank" href="https://www.facebook.com/share/p/1FKpo4btxH/">
-          <img src="IMG/TEO-Callejeritosalta.jpg" alt="Adopta un amigo">
-          <span>Adopta un perrito</span>
-           <a target = "_blank"  href="https://www.facebook.com/share/p/1EymzNvBBV/">
-          <img src="IMG/gatito-babyCallejeritossalta.jpg" alt="Adopta un cachorro">
-          <span>Conviertete en un Karen</span>
-
-           <a  target="_blank" href="https://www.facebook.com/share/p/19jZAimCGx/">
-          <img src="IMG/ajuya-dogpitbull.jpg" alt="Adopta un cachorro">
-          <span>Adopta un perrito</span>
-           <a target="_blank"  href="https://www.facebook.com/share/p/16RNKv86p1/">
-          <img src="IMG/baby-ajuya-dog.jpg" alt="Adopta un cachorro">
-          <span>Adopta un perrito</span>
-        </a>
-        
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>⚖️ Proyecto de Ley Popular</h2>
+        <p>Ley de Protección Integral de Animales Domésticos en Salta</p>
+        <p style="font-size: 1.5rem; margin-top: 1rem;">🤝 Por los que no tienen voz</p>
       </div>
-    </aside>
+    </section>
 
-  </div>
+    <!-- ÍNDICE DE CONTENIDOS -->
+    <section style="background: var(--color-light); border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="color: var(--color-primary); margin-bottom: 1rem; font-family: 'Truculenta', sans-serif;">📑 Contenido</h3>
+      <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <li><a href="#motivacion" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">📌 Motivación</a></li>
+        <li><a href="#objetivo" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">🎯 Objetivo</a></li>
+        <li><a href="#definiciones" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">📖 Definiciones</a></li>
+        <li><a href="#derechos" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">✅ Derechos</a></li>
+        <li><a href="#prohibiciones" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">🚫 Prohibiciones</a></li>
+        <li><a href="#sanciones" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">⚖️ Sanciones</a></li>
+        <li><a href="#obligaciones" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">📋 Obligaciones</a></li>
+        <li><a href="#firma" style="color: var(--color-accent); text-decoration: none; font-weight: bold;">✍️ Firmar</a></li>
+      </ul>
+    </section>
 
-    
-<!-- Overlay negro transparente -->
-<label for="modal-toggle" class="modal-overlay"></label>
+    <!-- MOTIVACIÓN -->
+    <section id="motivacion" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-primary);">📌 Exposición de Motivos</h2>
+      
+      <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+        En la Provincia de Salta, Argentina, existe un grave problema de abandono y maltrato animal que afecta a decenas de miles de perros y gatos vulnerables. La legislación actual (Ley Provincial Nº 7.428 de 2006) ha demostrado ser insuficiente y carente de mecanismos de ejecución efectivos.
+      </p>
 
-<!-- Formulario falta centrar-->
-<div class="modal-box">
-  <label for="modal-toggle" class="modal-close">&times;</label>
-  <h2 class="modal-title">Regístrate como Voluntario</h2>
+      <div style="background: var(--color-light); padding: 1.5rem; border-left: 4px solid var(--color-accent); border-radius: 8px; margin-bottom: 1.5rem;">
+        <h4 style="color: var(--color-accent); margin-bottom: 0.5rem;">Datos Alarmantes:</h4>
+        <ul style="margin: 0;">
+          <li>📍 Más de 30,000 perros callejeros en Salta Capital</li>
+          <li>📍 Menos del 20% de animales domésticos están castrados</li>
+          <li>📍 70% de personas conocen casos de abandono</li>
+          <li>📍 Carencia de sanciones efectivas en la ley actual</li>
+        </ul>
+      </div>
 
-  <!-- Formulario real -->
-  <form action="mailto:tunombre@email.com" method="POST" enctype="text/plain" class="registration-form">
-    <label>Nombre y Apellido:</label>
-    <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required />
+      <p>
+        Es imperativo que nuestra provincia avance hacia una legislación moderna, efectiva y que reconozca a los animales como seres sintientes con derechos fundamentales. Esta ley busca establecer estándares claros de protección, castigos proporcionales al maltrato, y mecanismos de prevención a través de la educación y esterilización.
+      </p>
+    </section>
 
-    <label>Edad:</label>
-    <select name="edad" required>
-      <option value="">Selecciona tu edad</option>
-     
-      <option value="18">18</option>
-      <option value="19">19</option>
-      <option value="20">20</option>
-  
-      <option value="100">100</option>
-    </select>
+    <!-- OBJETIVO GENERAL -->
+    <section id="objetivo" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-primary);">🎯 Objetivo General</h2>
+      
+      <div style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; padding: 2rem; border-radius: 10px; font-size: 1.1rem; line-height: 1.8;">
+        Establecer un marco legal integral para la protección, bienestar y defensa de los animales domésticos en la Provincia de Salta, garantizando su derecho a una vida libre de maltrato, abandono y explotación, mientras se promociona la tenencia responsable, la esterilización obligatoria y se implementan sanciones significativas para quienes incumplan.
+      </div>
+    </section>
 
-    <label>¿Dónde vives?</label>
-    <input type="text" name="provincia" placeholder="Ej: Salta Capital" required />
+    <!-- DEFINICIONES CLAVE -->
+    <section id="definiciones" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-primary);">📖 Definiciones Clave</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🐾 Animal Doméstico</h4>
+          <p>Todo perro, gato u otro animal que haya sido domesticado y coexista bajo la dependencia del ser humano.</p>
+        </div>
 
-    <label>Cuéntanos sobre ti:</label>
-    <textarea name="sobre-ti" rows="4" placeholder="¿Qué te motiva a ser voluntario?"></textarea>
+        <div style="border-left: 4px solid var(--color-accent); padding-left: 1rem;">
+          <h4 style="color: var(--color-accent); margin-bottom: 0.5rem;">😿 Maltrato Animal</h4>
+          <p>Toda acción u omisión que cause dolor, sufrimiento físico o psicológico a un animal.</p>
+        </div>
 
-    <label>Adjunta una foto de perfil:</label>
-    <input type="file" name="fotoPerfil" accept="image/*" />
+        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🚫 Abandono</h4>
+          <p>Dejar un animal sin protección, alimento, agua o atención veterinaria, ya sea temporal o permanentemente.</p>
+        </div>
 
-    <label>Red social:</label>
-    <input type="text" name="red-social" placeholder="Instagram / TikTok / Facebook" />
+        <div style="border-left: 4px solid var(--color-accent); padding-left: 1rem;">
+          <h4 style="color: var(--color-accent); margin-bottom: 0.5rem;">📋 Tenencia Responsable</h4>
+          <p>Conjunto de obligaciones que implica cuidar, proteger y garantizar el bienestar integral del animal.</p>
+        </div>
 
-    <!-- Botón WhatsApp con imagen y tooltip -->
-    <div class="whatsapp-link">
-      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw"  target="_blank">
-        <img src="IMG/whatsapp-logo.png" alt="Únete al grupo de WhatsApp" class="whatsapp-icon">
-        <span class="tooltip">Grupo de WhatsApp</span>
-      </a>
+        <div style="border-left: 4px solid var(--color-primary); padding-left: 1rem;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">💊 Esterilización</h4>
+          <p>Procedimiento quirúrgico o químico que previene la reproducción sin afectar salud del animal.</p>
+        </div>
+
+        <div style="border-left: 4px solid var(--color-accent); padding-left: 1rem;">
+          <h4 style="color: var(--color-accent); margin-bottom: 0.5rem;">🔖 Microchip</h4>
+          <p>Dispositivo de identificación electrónica implantado que permite rastrear al animal y su tenedor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DERECHOS DEL ANIMAL -->
+    <section id="derechos" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-primary);">✅ Derechos Fundamentales del Animal</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🍽️ Derecho a la Nutrición</h4>
+          <p>Todo animal tiene derecho a alimento fresco, agua potable diaria y nutrición apropiada para su especie.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-accent);">
+          <h4 style="color: var(--color-accent); margin-bottom: 1rem;">🏥 Derecho a la Salud</h4>
+          <p>Acceso a atención veterinaria preventiva y curativa, vacunación obligatoria y desparasitación.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🏃 Derecho a la Actividad</h4>
+          <p>Derecho a ejercicio diario, socialización y estimulación mental apropiados para su edad y especie.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-accent);">
+          <h4 style="color: var(--color-accent); margin-bottom: 1rem;">🏠 Derecho al Refugio</h4>
+          <p>Vivienda segura, limpia, con protección contra clima extremo y condiciones de hacinamiento.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4 style="color: var(--color-primary); margin-bottom: 1rem;">🕊️ Derecho a la Integridad</h4>
+          <p>Vida libre de violencia física, castigos crueles y explotación de cualquier tipo.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-accent);">
+          <h4 style="color: var(--color-accent); margin-bottom: 1rem;">📋 Derecho a la Identificación</h4>
+          <p>Microchip, collar con datos y registro oficial que permita identificación y rastreo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROHIBICIONES -->
+    <section id="prohibiciones" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-accent);">🚫 Conductas Prohibidas</h2>
+      
+      <div style="background: #ffe6e6; border-left: 6px solid var(--color-accent); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+        <p style="margin: 0;">Las siguientes conductas son <strong>TOTALMENTE PROHIBIDAS</strong> y pasibles de sanciones graves:</p>
+      </div>
+
+      <ul style="list-style: none; padding: 0; display: grid; gap: 1rem;">
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Abandono:</strong> Dejar un animal en la calle, parques, refugios informales o zonas rurales sin protección.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Privación de Alimento/Agua:</strong> Retener alimento, agua potable u otro elemento esencial por más de 24 horas.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Violencia Física:</strong> Golpes, patadas, lanzamiento de objetos, quemaduras o cualquier daño corporal.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Encierro Prolongado:</strong> Mantener animales en jaulas, cajas o espacios reducidos por más de 12 horas diarias.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Negación de Atención Veterinaria:</strong> Retener tratamiento médico a animal enfermo o herido.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Hacinamiento:</strong> Mantener más de 3 animales sin licencia en espacio menor a 20m² por animal.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Reproducción No Autorizada:</strong> Breeding sin registro, control sanitario o condiciones adecuadas.
+        </li>
+        <li style="background: var(--color-light); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+          <strong>❌ Comercio Ilícito:</strong> Venta de animales sin registro, documentación o procedencia verificable.
+        </li>
+      </ul>
+    </section>
+
+    <!-- SANCIONES -->
+    <section id="sanciones" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-accent);">⚖️ Sanciones y Penalidades</h2>
+      
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 1rem;">
+        <thead>
+          <tr style="background: var(--color-secondary); color: white;">
+            <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--color-dark);">Infracción</th>
+            <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--color-dark);">Multa</th>
+            <th style="padding: 1rem; text-align: left; border-bottom: 2px solid var(--color-dark);">Consecuencias</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 1rem;"><strong>Abandono Simple</strong></td>
+            <td style="padding: 1rem;">$5,000 - $15,000</td>
+            <td style="padding: 1rem;">Comiso de animal + Antecedentes</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 1rem;"><strong>Abandono Agravado</strong></td>
+            <td style="padding: 1rem;">$15,000 - $50,000</td>
+            <td style="padding: 1rem;">Cárcel 6-24 meses + Antecedentes</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 1rem;"><strong>Violencia Física</strong></td>
+            <td style="padding: 1rem;">$20,000 - $80,000</td>
+            <td style="padding: 1rem;">Cárcel 12-36 meses + Antecedentes</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 1rem;"><strong>Tortura/Muerte Intencional</strong></td>
+            <td style="padding: 1rem;">$50,000 - $200,000</td>
+            <td style="padding: 1rem;">Cárcel 3-5 años + Antecedentes</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 1rem;"><strong>Encierro Prolongado</strong></td>
+            <td style="padding: 1rem;">$5,000 - $20,000</td>
+            <td style="padding: 1rem;">Comiso de animal + Capacitación</td>
+          </tr>
+          <tr style="border-bottom: 1px solid #eee;">
+            <td style="padding: 1rem;"><strong>Negación de Atención Veterinaria</strong></td>
+            <td style="padding: 1rem;">$3,000 - $10,000</td>
+            <td style="padding: 1rem;">Órdenes de cuidado + Inspecciones</td>
+          </tr>
+          <tr>
+            <td style="padding: 1rem;"><strong>Comercio Ilícito</strong></td>
+            <td style="padding: 1rem;">$30,000 - $150,000</td>
+            <td style="padding: 1rem;">Cárcel 12-48 meses + Decomiso</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="background: var(--color-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--color-accent);">
+        <p style="margin: 0; font-weight: bold;">⚠️ NOTA IMPORTANTE:</p>
+        <p style="margin: 0.5rem 0 0 0;">Las multas se ajustarán anualmente según índice de inflación. Los condenados quedan inhabilitados para tenencia de animales durante 5-10 años según gravedad.</p>
+      </div>
+    </section>
+
+    <!-- OBLIGACIONES -->
+    <section id="obligaciones" style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-primary);">📋 Obligaciones del Tenedor</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4>✅ Registro Obligatorio</h4>
+          <p>Todo animal debe estar registrado en la municipalidad con datos del tenedor, microchip e información de salud.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4>✅ Esterilización Obligatoria</h4>
+          <p>Castración/esterilización antes de 6 meses de edad. Excepto criadores licenciados bajo condiciones específicas.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4>✅ Microchip</h4>
+          <p>Implante de microchip antes de los 4 meses. Registro en base de datos provincial.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4>✅ Vacunación</h4>
+          <p>Vacunación antirrábica anual obligatoria. Certificado expedido por veterinario autorizado.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4>✅ Atención Veterinaria</h4>
+          <p>Revisión veterinaria anual. Tratamiento inmediato de enfermedades o lesiones.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px; border-top: 4px solid var(--color-primary);">
+          <h4>✅ Cuidado Diario</h4>
+          <p>Alimento diario, agua fresca, refugio, ejercicio y socialización apropiados.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MECANISMOS DE APLICACIÓN -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h2 class="section-title" style="text-align: left; margin-top: 0; background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: var(--color-primary);">🛡️ Mecanismos de Protección y Ejecución</h2>
+      
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🏛️ Tribunal de Protección Animal</h4>
+          <p>Creación de juzgado especializado para casos de maltrato con magistrados capacitados.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">👮 Inspectores Municipales</h4>
+          <p>Personal capacitado para investigar denuncias y hacer cumplir normativas.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">🐾 Refugios Municipales</h4>
+          <p>Centros de protección con capacidad para resguardar animales decomisados.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">📱 Línea de Denuncias 24/7</h4>
+          <p>WhatsApp, teléfono y plataforma web para reportar casos de forma confidencial.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">📚 Programas de Educación</h4>
+          <p>Capacitación en escuelas, universidades y comunidades sobre tenencia responsable.</p>
+        </div>
+
+        <div style="background: var(--color-light); padding: 1.5rem; border-radius: 10px;">
+          <h4 style="color: var(--color-primary); margin-bottom: 0.5rem;">💊 Castración Gratuita</h4>
+          <p>Programas subsidiados en barrios vulnerables para prevenir abandono.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIRMA ELECTRÓNICA -->
+    <section id="firma" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); border-radius: 20px; padding: 3rem 2rem; text-align: center; color: white; margin-bottom: 3rem;">
+      <h2 style="font-family: 'Truculenta', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">✍️ Firma la Petición Popular</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Cada firma cuenta. Juntos podemos lograr que esta ley sea aprobada en Salta.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div>
+          <p style="font-size: 3rem;">📊</p>
+          <h4 style="margin-bottom: 0.5rem;">1,250</h4>
+          <p>Firmas Recolectadas</p>
+        </div>
+        <div>
+          <p style="font-size: 3rem;">🎯</p>
+          <h4 style="margin-bottom: 0.5rem;">5,000</h4>
+          <p>Firmas Necesarias</p>
+        </div>
+        <div>
+          <p style="font-size: 3rem;">📈</p>
+          <h4 style="margin-bottom: 0.5rem;">25%</h4>
+          <p>Avance de Meta</p>
+        </div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.2); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+        <p style="font-size: 0.95rem; margin: 0;">
+          Necesitamos 5,000 firmas de ciudadanos salteños para presentar la petición popular ante la Legislatura Provincial. <strong>¡Falta poco! 💪</strong>
+        </p>
+      </div>
+
+      <button class="btn-large btn-primary" onclick="firmaPeticion()" style="font-size: 1.2rem; padding: 1rem 2rem;">
+        ✍️ FIRMAR AHORA
+      </button>
+    </section>
+
+    <!-- DESCARGA DOCUMENTO -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: var(--color-primary); margin-bottom: 1rem; font-family: 'Truculenta', sans-serif;">📄 Descarga el Proyecto Completo</h3>
+      <p style="margin-bottom: 1.5rem;">Aquí puedes descargar el texto completo del proyecto de ley con todos los artículos.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <a href="#" class="btn-large btn-primary" onclick="downloadPDF()">📥 PDF Completo</a>
+        <a href="#" class="btn-large btn-primary" onclick="downloadWord()">📥 Documento Word</a>
+        <a href="#" class="btn-large btn-primary" onclick="compartirPDF()">📤 Compartir</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>⚖️ Proyecto de Ley</h3>
+        <p>Iniciativa popular por la protección integral de animales domésticos en Salta</p>
+      </div>
+      <div class="footer-section">
+        <h3>🔗 Enlaces</h3>
+        <ul>
+          <li><a href="index-mejorado.html">Inicio</a></li>
+          <li><a href="denuncias.html">Denuncias</a></li>
+          <li><a href="adopta.html">Adopta</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>📞 Contacto</h3>
+        <p><a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank">WhatsApp: Grupo 24/7</a></p>
+      </div>
     </div>
+    <p style="text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+      © 2025 Tribu Rescate - Por los que no tienen voz
+    </p>
+  </footer>
 
-    <button type="submit" class="btn-whatsapp">Enviar</button>
-  </form>
-</div>
+  <script>
+    function firmaPeticion() {
+      const nombre = prompt('¿Cuál es tu nombre?');
+      if (nombre) {
+        alert(`¡Gracias ${nombre}! Tu firma ha sido registrada.\n\nAhora compartamos en WhatsApp:`, 'Firmar Petición');
+        window.open('https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw', '_blank');
+      }
+    }
+
+    function downloadPDF() {
+      alert('El PDF se descargará. ¡Comparte con otros para lograr más firmas!');
+      // Aquí irá el link a descargar
+    }
+
+    function downloadWord() {
+      alert('Documento Word descargando. ¡Usa esto para difundir!');
+      // Aquí irá el link a descargar
+    }
+
+    function compartirPDF() {
+      const text = 'Firma la petición popular por la Ley de Protección Animal en Salta. Juntos podemos cambiar las cosas 🐾';
+      navigator.clipboard.writeText(text + ' ' + window.location.href);
+      alert('Compartir en tus redes. Texto copiado!');
+    }
+  </script>
 
 </body>
 </html>
