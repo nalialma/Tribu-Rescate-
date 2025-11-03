@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pasea un Perrito | Tribu Rescate</title>
+  <link rel="stylesheet" href="style-mejorado.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&family=Rock+Salt&family=Concierto+One&family=Josefin+Sans&family=Alumni+Sans+SC&display=swap" rel="stylesheet">
+  <style>
+    .priority-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+    .priority-card { background: white; border-radius: 15px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+    .priority-card:hover { transform: translateY(-10px); box-shadow: 0 8px 30px rgba(0,0,0,0.2); }
+    .priority-card-icon { font-size: 3rem; margin-bottom: 1rem; animation: bounce 2s ease-in-out infinite; }
+    .perro-card { background: white; border-radius: 15px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .perro-emoji { font-size: 4rem; text-align: center; margin-bottom: 1rem; }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
+      <h1 class="site-title">Tribu Rescate</h1>
+    </div>
+    <div class="header-right">
+      <button class="cta-button" onclick="window.location.href='index-mejorado.html'">← Volver</button>
+    </div>
+  </header>
+
+  <!-- FONDO -->
+  <div class="paw-background">
+    <div class="paw paw-dog" style="top: 10%; left: 5%;">🐾</div>
+    <div class="paw paw-cat" style="top: 80%; right: 10%;">🐾</div>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>🚶 Pasea un Perrito</h2>
+        <p>30 minutos de tu tiempo = Toda una vida feliz para un perro en refugio</p>
+        <p style="font-size: 1.2rem; margin-top: 1rem;">Regala compañía, movimiento y felicidad 🐕</p>
+      </div>
+    </section>
+
+    <!-- INFORMACIÓN IMPORTANTE -->
+    <section class="priority-grid" style="margin-bottom: 3rem;">
+      <div class="priority-card">
+        <div class="priority-card-icon">⏱️</div>
+        <h3>Solo 30 Minutos</h3>
+        <p>Dedica solo media hora de tu tiempo. Para el perro significa todo el mundo.</p>
+      </div>
+
+      <div class="priority-card">
+        <div class="priority-card-icon">🏃</div>
+        <h3>Beneficios para Ellos</h3>
+        <p>Ejercicio, socialización, felicidad y el contacto humano que tanto necesitan.</p>
+      </div>
+
+      <div class="priority-card">
+        <div class="priority-card-icon">💪</div>
+        <h3>Beneficios para Ti</h3>
+        <p>Ejercicio físico, salud mental, conexión con la naturaleza y hacer una diferencia.</p>
+      </div>
+    </section>
+
+    <!-- POR QUÉ PASEAR -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="font-family: 'Truculenta', sans-serif; color: #4ca5c7; margin-bottom: 1.5rem; text-align: center;">❓ ¿Por Qué es Importante Pasear Perros en Refugios?</h3>
+      
+      <div style="display: grid; gap: 1.5rem;">
+        <div style="background: #fffde5; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4ca5c7;">
+          <h4 style="color: #4ca5c7; margin-bottom: 0.5rem;">🐕 Necesidad de Ejercicio</h4>
+          <p>Los perros en refugios pasan mucho tiempo en espacios limitados. El paseo les permite correr, explorar y gastar energía que acumula estrés y comportamientos destructivos.</p>
+        </div>
+
+        <div style="background: #fffde5; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #e8b62b;">
+          <h4 style="color: #e8b62b; margin-bottom: 0.5rem;">👫 Socialización</h4>
+          <p>Estar fuera del refugio, ver gente, otros perros y el mundo exterior, es fundamental para su desarrollo emocional y comportamiento futuro.</p>
+        </div>
+
+        <div style="background: #fffde5; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #c12c2e;">
+          <h4 style="color: #c12c2e; margin-bottom: 0.5rem;">❤️ Impacto Emocional</h4>
+          <p>Sentir el cariño humano, estar fuera del encierro y recibir atención, reduce el estrés y la depresión en los perros rescatados.</p>
+        </div>
+
+        <div style="background: #fffde5; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4ca5c7;">
+          <h4 style="color: #4ca5c7; margin-bottom: 0.5rem;">🏠 Preparación para Adopción</h4>
+          <p>Los perros que salen a pasear son más dóciles, seguros y mejor preparados para sus futuros hogares.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERROS ESPERANDO -->
+    <h2 class="section-title" style="background: none; -webkit-background-clip: unset; -webkit-text-fill-color: unset; color: #4ca5c7;">🐕 Estos Perros Te Esperan Este Fin de Semana</h2>
+
+    <section class="priority-grid">
+      <div class="perro-card">
+        <div class="perro-emoji">🐕</div>
+        <h4 style="color: #4ca5c7;">Bruno</h4>
+        <p><strong>Edad:</strong> 2 años • <strong>Tamaño:</strong> Grande</p>
+        <p>Perro energético que necesita alguien activo. ¡Perfecto para correr!</p>
+      </div>
+
+      <div class="perro-card">
+        <div class="perro-emoji">🐕‍🦺</div>
+        <h4 style="color: #4ca5c7;">Toto</h4>
+        <p><strong>Edad:</strong> 5 años • <strong>Tamaño:</strong> Mediano</p>
+        <p>Perro tranquilo, ideal para caminatas relajadas. Muy dócil.</p>
+      </div>
+
+      <div class="perro-card">
+        <div class="perro-emoji">🐕</div>
+        <h4 style="color: #4ca5c7;">Rex</h4>
+        <p><strong>Edad:</strong> 1 año • <strong>Tamaño:</strong> Pequeño</p>
+        <p>Cachorro juguetón lleno de energía. ¡Le encanta jugar!</p>
+      </div>
+
+      <div class="perro-card">
+        <div class="perro-emoji">🐕‍🦺</div>
+        <h4 style="color: #4ca5c7;">Negrito</h4>
+        <p><strong>Edad:</strong> 4 años • <strong>Tamaño:</strong> Grande</p>
+        <p>Perro leal y cariñoso. Solo necesita alguien que lo pasee con paciencia.</p>
+      </div>
+
+      <div class="perro-card">
+        <div class="perro-emoji">🐕</div>
+        <h4 style="color: #4ca5c7;">Canela</h4>
+        <p><strong>Edad:</strong> 3 años • <strong>Tamaño:</strong> Mediano</p>
+        <p>Perrita dulce y sociable. Adora las caminatas matutinas.</p>
+      </div>
+
+      <div class="perro-card">
+        <div class="perro-emoji">🐕‍🦺</div>
+        <h4 style="color: #4ca5c7;">Luna</h4>
+        <p><strong>Edad:</strong> 2 años • <strong>Tamaño:</strong> Pequeña</p>
+        <p>Perrita rescatada. Miedosa pero cariñosa. Necesita paciencia y amor.</p>
+      </div>
+    </section>
+
+    <!-- CÓMO HACERLO -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin: 3rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="font-family: 'Truculenta', sans-serif; color: #4ca5c7; margin-bottom: 1.5rem; text-align: center;">📋 ¿Cómo Pasear un Perro del Refugio?</h3>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #4ca5c7; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">1️⃣</div>
+          <h4 style="color: #4ca5c7;">Contacta</h4>
+          <p>Escríbenos por WhatsApp o visita el Centro Mancilla</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #e8b62b; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">2️⃣</div>
+          <h4 style="color: #e8b62b;">Elige Perro</h4>
+          <p>Selecciona con cuál quieres pasear y en qué horario</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #c12c2e; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">3️⃣</div>
+          <h4 style="color: #c12c2e;">Pasea</h4>
+          <p>30 minutos mínimo. ¡Llévalo a su lugar favorito!</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #4ca5c7; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">4️⃣</div>
+          <h4 style="color: #4ca5c7;">Regresa</h4>
+          <p>Devuelve al perro al refugio con agua y cuidado</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #e8b62b; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">5️⃣</div>
+          <h4 style="color: #e8b62b;">Repite</h4>
+          <p>¡Vuelve cada semana o cada quince días!</p>
+        </div>
+
+        <div style="text-align: center; padding: 1.5rem; border: 2px solid #c12c2e; border-radius: 10px;">
+          <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">❤️</div>
+          <h4 style="color: #c12c2e;">¡Eres Héroe!</h4>
+          <p>Acabas de cambiar la vida de un perro 🐾</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSEJOS IMPORTANTES -->
+    <section style="background: white; border-radius: 15px; padding: 2rem; margin: 3rem 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+      <h3 style="font-family: 'Truculenta', sans-serif; color: #4ca5c7; margin-bottom: 1.5rem;">💡 Consejos para Pasear con Seguridad</h3>
+      
+      <ul style="list-style: none; padding: 0; display: grid; gap: 1rem;">
+        <li style="background: #fffde5; padding: 1rem; border-radius: 8px; border-left: 4px solid #4ca5c7; padding-left: 1.5rem;">
+          ✅ <strong>Mantén la correa siempre:</strong> Aunque sea tranquilo, nunca sueltes la correa en lugares públicos.
+        </li>
+        <li style="background: #fffde5; padding: 1rem; border-radius: 8px; border-left: 4px solid #4ca5c7; padding-left: 1.5rem;">
+          ✅ <strong>Ten paciencia:</strong> Algunos perros son miedosos. Déjale explorar a su ritmo.
+        </li>
+        <li style="background: #fffde5; padding: 1rem; border-radius: 8px; border-left: 4px solid #4ca5c7; padding-left: 1.5rem;">
+          ✅ <strong>Lleva agua:</strong> Ofrécele agua durante el paseo, especialmente en días calurosos.
+        </li>
+        <li style="background: #fffde5; padding: 1rem; border-radius: 8px; border-left: 4px solid #4ca5c7; padding-left: 1.5rem;">
+          ✅ <strong>Evita lugares concurridos:</strong> Mejor parques tranquilos para no estresarlo.
+        </li>
+        <li style="background: #fffde5; padding: 1rem; border-radius: 8px; border-left: 4px solid #4ca5c7; padding-left: 1.5rem;">
+          ✅ <strong>No lo fuerces:</strong> Si está cansado o miedoso, regresa al refugio sin presionarlo.
+        </li>
+        <li style="background: #fffde5; padding: 1rem; border-radius: 8px; border-left: 4px solid #4ca5c7; padding-left: 1.5rem;">
+          ✅ <strong>Sé gentil:</strong> Hablale con cariño, acarícialo, hazlo sentir seguro.
+        </li>
+      </ul>
+    </section>
+
+    <!-- LLAMADO A LA ACCIÓN -->
+    <section style="background: linear-gradient(135deg, #4ca5c7, #e8b62b); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin: 3rem 0;">
+      <h2 style="font-family: 'Truculenta', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">¿Listo para Pasear?</h2>
+      <p style="font-size: 1.2rem; margin-bottom: 2rem;">Contáctanos ahora. Un perro te espera este fin de semana.</p>
+      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" style="display: inline-block; background: white; color: #4ca5c7; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-family: 'Truculenta', sans-serif; font-size: 1.1rem; transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        💬 Regístrate para Pasear
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>🚶 Pasea un Perrito</h3>
+        <p>Regala compañía. Cambia vidas. Es tan simple.</p>
+      </div>
+      <div class="footer-section">
+        <h3>📍 Centro Mancilla</h3>
+        <p>Ubicación en Salta Capital<br>Abierto de lunes a domingo</p>
+      </div>
+      <div class="footer-section">
+        <h3>📞 Contacto</h3>
+        <p><a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank">WhatsApp 24/7</a></p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+      © 2025 Tribu Rescate - Cada paseo es un acto de amor 🐾
+    </p>
+  </footer>
+
+</body>
+</html>
