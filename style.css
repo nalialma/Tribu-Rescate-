@@ -1028,3 +1028,392 @@ main {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px var(--shadow-medium);
 }
+
+/* ==================== ESTILOS ADICIONALES PARA INDEX  ==================== */
+
+/* PERSONALIZACIÓN DEL FONDO DINÁMICO */
+
+/* Efecto de zoom lento en imágenes de fondo al cargar */
+.bg-image {
+  animation: zoomFade 2s ease-out forwards !important;
+}
+
+@keyframes zoomFade {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0.08;
+  }
+}
+
+/* Efecto de giro sutil en imágenes */
+.bg-image-1, .bg-image-3, .bg-image-5, .bg-image-7 {
+  animation-direction: normal;
+}
+
+.bg-image-2, .bg-image-4, .bg-image-6, .bg-image-8 {
+  animation-direction: reverse;
+}
+
+/* Hover effect en imágenes de fondo (cuando sea posible) */
+@media (hover: hover) {
+  .bg-image:hover {
+    opacity: 0.3 !important;
+    filter: brightness(1.1);
+  }
+}
+
+/* ==================== MEJORAS DEL BOTÓN EXPANDIBLE ==================== */
+
+/* Efecto pulse al cargar página */
+.expand-btn {
+  animation: pulseButton 2s ease-in-out infinite;
+}
+
+@keyframes pulseButton {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(232, 182, 43, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(232, 182, 43, 0.6);
+  }
+}
+
+/* Efecto ripple al hacer click */
+.expand-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.expand-btn:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* Efecto de brillo al hover */
+.expand-btn:hover {
+  animation: shine 0.6s ease-in-out;
+}
+
+@keyframes shine {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+/* ==================== ANIMACIONES DEL MENÚ EXPANDIBLE ==================== */
+
+/* Animación de entrada de items del menú */
+.nav-menu-expandable a {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.nav-menu-expandable.active a {
+  animation: slideInFromLeft 0.4s ease-out forwards;
+}
+
+.nav-menu-expandable.active a:nth-child(1) { animation-delay: 0.05s; }
+.nav-menu-expandable.active a:nth-child(2) { animation-delay: 0.1s; }
+.nav-menu-expandable.active a:nth-child(3) { animation-delay: 0.15s; }
+.nav-menu-expandable.active a:nth-child(4) { animation-delay: 0.2s; }
+.nav-menu-expandable.active a:nth-child(5) { animation-delay: 0.25s; }
+.nav-menu-expandable.active a:nth-child(6) { animation-delay: 0.3s; }
+.nav-menu-expandable.active a:nth-child(7) { animation-delay: 0.35s; }
+.nav-menu-expandable.active a:nth-child(8) { animation-delay: 0.4s; }
+.nav-menu-expandable.active a:nth-child(9) { animation-delay: 0.45s; }
+.nav-menu-expandable.active a:nth-child(10) { animation-delay: 0.5s; }
+.nav-menu-expandable.active a:nth-child(11) { animation-delay: 0.55s; }
+.nav-menu-expandable.active a:nth-child(12) { animation-delay: 0.6s; }
+.nav-menu-expandable.active a:nth-child(13) { animation-delay: 0.65s; }
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Efecto hover mejorado en links del menú */
+.nav-menu-expandable a {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-menu-expandable a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.nav-menu-expandable a:hover::before {
+  left: 100%;
+}
+
+/* ==================== MEJORAS DE TRANSICIONES ==================== */
+
+/* Transición suave del contenido principal */
+main {
+  animation: fadeInContent 0.8s ease-out;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ==================== EFECTOS ESPECIALES DEL FONDO ==================== */
+
+/* Efecto de partículas flotantes adicionales */
+.dynamic-background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(100px at 20% 50%, rgba(76, 165, 199, 0.03) 0%, transparent 50%),
+    radial-gradient(80px at 80% 80%, rgba(232, 182, 43, 0.03) 0%, transparent 50%),
+    radial-gradient(120px at 40% 20%, rgba(193, 44, 46, 0.02) 0%, transparent 50%);
+  animation: gradientShift 15s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ==================== MEJORAS DE ACCESIBILIDAD ==================== */
+
+/* Focus visible mejorado */
+.expand-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.nav-menu-expandable a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* Reducir motion para usuarios sensibles */
+@media (prefers-reduced-motion: reduce) {
+  .bg-image,
+  .expand-btn,
+  .nav-menu-expandable a,
+  main {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .expand-btn:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ==================== MEJORAS PARA PANTALLAS GRANDES ==================== */
+
+@media (min-width: 1400px) {
+  .bg-image {
+    width: 400px;
+    height: 350px;
+  }
+  
+  .bg-image-1 { width: 400px; height: 320px; }
+  .bg-image-2 { width: 380px; height: 380px; }
+  .bg-image-4 { width: 400px; height: 310px; }
+}
+
+/* ==================== MEJORAS PARA PANTALLAS PEQUEÑAS ==================== */
+
+@media (max-width: 480px) {
+  .bg-image {
+    width: 200px;
+    height: 200px;
+    opacity: 0.05;
+  }
+  
+  .dynamic-background {
+    display: none;
+  }
+  
+  .nav-expandable {
+    bottom: 15px;
+    left: 15px;
+  }
+  
+  .expand-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .nav-menu-expandable {
+    min-width: 220px;
+  }
+}
+
+/* ==================== EFECTOS DE CARGA ==================== */
+
+/* Loading skeleton opcional */
+.bg-image {
+  background-color: rgba(232, 182, 43, 0.1);
+  background-attachment: fixed;
+  background-size: 1000% 1000%;
+}
+
+/* Animación de carga de imágenes */
+.bg-image[style*="background-image"] {
+  animation: imageLoad 0.5s ease-out !important;
+}
+
+@keyframes imageLoad {
+  0% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+/* ==================== SOMBRAS MEJORADAS ==================== */
+
+.expand-btn {
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(232, 182, 43, 0.3);
+}
+
+.nav-menu-expandable {
+  box-shadow:
+    0 6px 30px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(76, 165, 199, 0.1);
+}
+
+/* ==================== TRANSFORMACIONES 3D SUTILES ==================== */
+
+.expand-btn {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.expand-btn:hover {
+  transform: translateY(-3px) rotateX(5deg);
+}
+
+.expand-btn:active {
+  transform: translateY(-1px) rotateX(0deg);
+}
+
+/* ==================== GRADIENTES ANIMADOS ==================== */
+
+.expand-btn {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+  background-size: 200% 200%;
+  animation: gradientShiftBtn 3s ease infinite;
+}
+
+@keyframes gradientShiftBtn {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ==================== TEXTO MEJORADO ==================== */
+
+.nav-title {
+  animation: fadeInDown 0.6s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== EFECTOS ESPECIALES DE INTERACCIÓN ==================== */
+
+/* Efecto de presión al click */
+.nav-menu-expandable a:active {
+  transform: scale(0.98);
+}
+
+/* Efecto de brillo en el menú */
+.nav-menu-expandable.active {
+  animation: menuGlow 0.5s ease-out;
+}
+
+@keyframes menuGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(76, 165, 199, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(76, 165, 199, 0.3);
+  }
+  100% {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ==================== OPTIMIZACIONES DE RENDIMIENTO ==================== */
+
+/* GPU acceleration */
+.bg-image,
+.expand-btn,
+.nav-menu-expandable {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Contenido renderizado eficientemente */
+main {
+  contain: layout style paint;
+}
