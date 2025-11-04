@@ -7,16 +7,233 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@400;700&family=Rock+Salt&family=Concierto+One&family=Josefin+Sans&family=Alumni+Sans+SC&display=swap" rel="stylesheet">
   <meta name="description" content="Tribu Rescate - Rescate, adopción y educación animal en Salta. Únete para cambiar vidas.">
+  <style>
+    /* FONDO DINÁMICO CON IMÁGENES */
+    .dynamic-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+      overflow: hidden;
+      background: var(--color-bg);
+    }
+
+    .bg-image {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      opacity: 0.15;
+      backdrop-filter: blur(8px);
+      transition: opacity 0.8s ease-in-out, transform 0.6s ease-out;
+      pointer-events: none;
+    }
+
+    .bg-image-1 {
+      width: 350px;
+      height: 280px;
+      top: 5%;
+      left: 5%;
+      background-image: url('https://scontent.fsla3-1.fna.fbcdn.net/v/t39.30808-6/514087596_122106257072923253_210501417052009929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGLSM5-YdM31cpo-v-2SMX3X2s8Llf73ZJfazwuV_vdkjMj9ctYZu7VOItbKvpcffs&_nc_ohc=hDGLszUuoSoQ7kNvwHyAA-o&_nc_oc=AdnevoV99HdClBIrqX5m4K6UbWLqOl5P9VeuC_M5PhtLhYhBVyAlR_yJoPDwAY94xqU&_nc_zt=23&_nc_ht=scontent.fsla3-1.fna&_nc_gid=kf0xxWhqMgAL0YsC0m062w&oh=00_Afimyj-TZk-xAVe3lTIR1x5TSxIVEzLDI65xgKj1wcLQBQ&oe=691042A1');
+      animation: float 15s ease-in-out infinite, fadeInOut 4s ease-in-out 0s infinite;
+    }
+
+    .bg-image-2 {
+      width: 320px;
+      height: 320px;
+      top: 10%;
+      right: 8%;
+      background-image: url('https://scontent.fsla4-1.fna.fbcdn.net/v/t51.82787-15/518187405_17848977327511986_6537367668987455863_n.webp?stp=dst-jpg_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEVBna6BQPgbQ7qfisJuXfIWAlYVHXWq7BYCVhUddarsFIK4zHP9JgtCx1XFf9nxTk&_nc_ohc=M1J1RhYxJSsQ7kNvwGAtcnv&_nc_oc=AdntrqGXIIi2UT3g0_XkGmsdg0PIq9jUPyCqk2L6vRnFjz6vI44IAEO3WHLfVEfoCW4&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=FO2tra1WDMtDxpCs86LyuQ&oh=00_AfhuLniq518DTUKidn4H5IbiNCKUlwvC1H9FDThS2Sm1Zw&oe=691031E3');
+      animation: float 18s ease-in-out infinite 1s, fadeInOut 4s ease-in-out 2s infinite;
+    }
+
+    .bg-image-3 {
+      width: 280px;
+      height: 300px;
+      top: 50%;
+      left: 3%;
+      background-image: url('https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/518812046_122116830020923253_7009021312382308129_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH-daKxrjFgLffS52-Lnqg-X3QC_DjbRntfdAL8ONtGe0f3IHvs3PF0BS6NwTacIlA&_nc_ohc=l9gvxWQRlTAQ7kNvwFmK4cr&_nc_oc=Adk_tBcQFISoYb7t7yPNV9YSkjKTdKA31bjmxYgkoZISSq-syq8DUJKLn-uf4JoOsR0&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=DwnL-SahQngjNAwTDk4_ew&oh=00_AfjS79kuJRv6NaUDHTHpNSOuF-oHtQjZHcX_AHFQsJuOug&oe=69104529');
+      animation: float 20s ease-in-out infinite 2s, fadeInOut 4s ease-in-out 1s infinite;
+    }
+
+    .bg-image-4 {
+      width: 330px;
+      height: 260px;
+      top: 55%;
+      right: 5%;
+      background-image: url('https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/524425808_122120214506923253_5847994989405642142_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGUaWJi6ayyPy-BRNLI8FCcf28cLts70wZ_bxwu2zvTBmsHnphQythSCdPoWJ4JA5Q&_nc_ohc=d3-4bca_uJMQ7kNvwEYXVvm&_nc_oc=Adn6CDScEeXl1A3VAk2dk2pny8_enavOJECU_qth__Aa5--ZiHMpm1iQSHVcKE-TvwQ&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=H97gsehN0u7d-RsbkEAzCA&oh=00_Afgj1Xp1eyK0G60ghma6EL_bA2S4tRKq7RvkGmof2A6ajw&oe=69102D05');
+      animation: float 16s ease-in-out infinite 3s, fadeInOut 4s ease-in-out 0.5s infinite;
+    }
+
+    .bg-image-5 {
+      width: 290px;
+      height: 310px;
+      top: 70%;
+      left: 12%;
+      background-image: url('https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/571259938_122140375496923253_8206637298352341022_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE9rNQ9aAYMjur3dFacbw9zCHSYG0AUGhcIdJgbQBQaF_JAGbi5nxXK8x3Rvf1RSYo&_nc_ohc=uUofDj0iw7MQ7kNvwE-YNm4&_nc_oc=AdnpXZ3y9PVhJM0Pq8ksE2Kfe1JgLn9UQakbIkjv2wqlErXjl-QeHyVhfO1TravLzE0&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=TKaQSNbTH4N1Qg6tQpz5Eg&oh=00_AfgTCloonGx7AACvYEFQFXeMJ1g6CBttIe_nxEwRwXac3Q&oe=69103514');
+      animation: float 19s ease-in-out infinite 4s, fadeInOut 4s ease-in-out 1.5s infinite;
+    }
+
+    .bg-image-6 {
+      width: 310px;
+      height: 290px;
+      top: 15%;
+      left: 45%;
+      background-image: url('https://scontent.fsla3-1.fna.fbcdn.net/v/t39.30808-6/565115548_122138801330923253_2539095965969184303_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHdyfAWyz_cD2OSwNC6D2S044qxQNnHGavjirFA2ccZq13KV6503pFxQT7_QIdsBhw&_nc_ohc=o2I26cNU6CsQ7kNvwENylwM&_nc_oc=AdkqyJyt2_bho-wTT0LPmL7w65GCTH0gGmIw3alPDW5ku67eM2b-sCXq5fEfByBH974&_nc_zt=23&_nc_ht=scontent.fsla3-1.fna&_nc_gid=RFl9oHA2ZvgO7q50r0MPQQ&oh=00_AfjtdqOJqyfqNjnTQP3v0KVzTv-kP-DQhZvt_T4JpHbuOw&oe=69103FF3');
+      animation: float 17s ease-in-out infinite 2.5s, fadeInOut 4s ease-in-out 2s infinite;
+    }
+
+    .bg-image-7 {
+      width: 300px;
+      height: 320px;
+      top: 65%;
+      right: 15%;
+      background-image: url('https://scontent.fsla3-1.fna.fbcdn.net/v/t39.30808-6/565346010_122138799938923253_6851328001201353240_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGDOIplXHjgcFm5Yz2A3IZEf4lP577Xi6V_iU_nvteLpdId_Fv7pEqyPBSXzjb9lWI&_nc_ohc=_IXr7lk8gUIQ7kNvwGZo1tm&_nc_oc=Adn_WjYHBmKIryCc1VhA2XB-bkCEXGrBJi5gLbPbzmw2CEDCETPGjJ6Th4Ch71dXv7Q&_nc_zt=23&_nc_ht=scontent.fsla3-1.fna&_nc_gid=KLZrSaA0D_i1VL78ozlyRw&oh=00_AfjjXG136l_6_MLwqfAqpzr9YJechX3v8fiBahycZX52Ow&oe=691048C9');
+      animation: float 21s ease-in-out infinite 5s, fadeInOut 4s ease-in-out 0.8s infinite;
+    }
+
+    .bg-image-8 {
+      width: 320px;
+      height: 280px;
+      top: 5%;
+      right: 30%;
+      background-image: url('https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/564615117_122138793758923253_9120008130746448284_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGTA0sI2hJK6sCwMNL9CtfEFI6AUVUpK18UjoBRVSkrXzEsRsKNEDlAYKQrsCtSR0s&_nc_ohc=ifvWJ_2ICzkQ7kNvwHZdhkO&_nc_oc=Adl-ZNN3qHWL62xh78ZNBlV9doSCzqfACpgPgiKJpVK8RnHbgSePPq-RMcMqnl_fSdE&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=ZY5405Sj7cI6fdNIj1fdIg&oh=00_AfgCjeGYC6QOHKS-Ej3-AEIcFDwFJPAkOim9v4z7_0bUnQ&oe=69102EE7');
+      animation: float 18s ease-in-out infinite 3.5s, fadeInOut 4s ease-in-out 2.5s infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-30px) rotate(3deg); }
+      50% { transform: translateY(0px) rotate(0deg); }
+      75% { transform: translateY(-30px) rotate(-3deg); }
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0.08; }
+      50% { opacity: 0.22; }
+    }
+
+    /* BOTÓN EXPANDIBLE DE NAVEGACIÓN SECUNDARIA */
+    .nav-expandable {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 850;
+    }
+
+    .expand-btn {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .expand-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .expand-btn.active {
+      transform: rotate(45deg);
+    }
+
+    .nav-menu-expandable {
+      position: absolute;
+      bottom: 80px;
+      left: 0;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+      padding: 1.5rem;
+      min-width: 280px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .nav-menu-expandable.active {
+      max-height: 600px;
+      overflow-y: auto;
+    }
+
+    .nav-menu-expandable a {
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--color-dark);
+      border-bottom: 1px solid #eee;
+      transition: all 0.3s ease;
+      font-family: 'Truculenta', sans-serif;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .nav-menu-expandable a:last-child {
+      border-bottom: none;
+    }
+
+    .nav-menu-expandable a:hover {
+      background: var(--color-light);
+      color: var(--color-primary);
+      padding-left: 1.5rem;
+    }
+
+    .nav-title {
+      font-family: 'Truculenta', sans-serif;
+      font-size: 1.2rem;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--color-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .nav-expandable {
+        bottom: 20px;
+        left: 20px;
+      }
+
+      .expand-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+
+      .nav-menu-expandable {
+        min-width: 240px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- SPLASH SCREEN ANIMADO -->
-  <div class="splash-screen" id="splashScreen">
-    <img src="https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/510459532_122101820138923253_3159860008863386857_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFOoH0H3fjMxcBisqFgiH4tM9ZjVzhLGwUz1mNXOEsbBZwpFk71Bj9RcX0EK5vmxTA&_nc_ohc=H5QJsy-jRiwQ7kNvwECstBB&_nc_oc=AdleZXCCsv2cWsD4rYvErbUTihkxywLFsNq0vYe-iBlIkccipgYcEo3a8P3R5SGn4Rc&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=NV7ecEVXUkf1zDg207vU3w&oh=00_Afj7al64Ebazow1UnSsChQV5XtyMlOkpBozhmJXVYpQq3g&oe=690DE536" alt="Logo Tribu Rescate" class="splash-logo">
-    <h1 class="splash-text">
-      <span>Tú</span> también puedes formar parte del <span>cambio</span> 🐾
-    </h1>
-    <div class="splash-loading"></div>
+  <!-- FONDO DINÁMICO CON IMÁGENES ALEATORIAS Y TRANSPARENCIAS -->
+  <div class="dynamic-background" id="dynamicBg">
+    <div class="bg-image bg-image-1"></div>
+    <div class="bg-image bg-image-2"></div>
+    <div class="bg-image bg-image-3"></div>
+    <div class="bg-image bg-image-4"></div>
+    <div class="bg-image bg-image-5"></div>
+    <div class="bg-image bg-image-6"></div>
+    <div class="bg-image bg-image-7"></div>
+    <div class="bg-image bg-image-8"></div>
   </div>
 
   <!-- FONDO CON HUELLAS -->
@@ -29,10 +246,19 @@
     <div class="paw paw-cat" style="top: 30%; right: 30%; animation-duration: 29s; animation-delay: 12s;">🐾</div>
   </div>
 
+  <!-- SPLASH SCREEN ANIMADO -->
+  <div class="splash-screen" id="splashScreen">
+    <img src="https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/510459532_122101820138923253_3159860008863386857_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFOoH0H3fjMxcBisqFgiH4tM9ZjVzhLGwUz1mNXOEsbBZwpFk71Bj9RcX0EK5vmxTA&_nc_ohc=H5QJsy-jRiwQ7kNvwECstBB&_nc_oc=AdleZXCCsv2cWsD4rYvErbUTihkxywLFsNq0vYe-iBlIkccipgYcEo3a8P3R5SGn4Rc&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=NV7ecEVXUkf1zDg207vU3w&oh=00_Afj7al64Ebazow1UnSsChQV5XtyMlOkpBozhmJXVYpQq3g&oe=690DE536" alt="Logo Tribu Rescate" class="splash-logo">
+    <h1 class="splash-text">
+      <span>Tú</span> también puedes formar parte del <span>cambio</span> 🐾
+    </h1>
+    <div class="splash-loading"></div>
+  </div>
+
   <!-- HEADER CON NAVEGACIÓN MEJORADA -->
   <header class="header">
     <div class="logo-container">
-      <img src="https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/510459532_122101820138923253_3159860008863386857_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFOoH0H3fjMxcBisqFgiH4tM9ZjVzhLGwUz1mNXOEsbBZwpFk71Bj9RcX0EK5vmxTA&_nc_ohc=oOgLRwVFCT0Q7kNvwEYFojE&_nc_oc=AdnU5xCcTJJkHnYRyzaSvbfMl88woc9yZasGWAVkKkAkx1Rib2ZIHPTmkKqtWuyxxho&_nc_zt=23&_nc_ht=scontent.fsla4-1.fna&_nc_gid=RXmmh3emt1HOwNU1BDZx8w&oh=00_AfiUXxD9Rk-i-yofc1sDEjy5EFzWXFluYqOodA9QXazZbw&oe=69104FF6" alt="Logo Tribu Rescate" class="logo" />
+      <img src="IMG/RESCATE TRIBU-logo.png" alt="Logo Tribu Rescate" class="logo" />
       <h1 class="site-title">Tribu Rescate</h1>
     </div>
     
@@ -49,7 +275,7 @@
     </div>
   </header>
 
-  <!-- NAVEGACIÓN DESPLEGABLE -->
+  <!-- NAVEGACIÓN DESPLEGABLE PRINCIPAL -->
   <nav id="mainNav">
     <a href="adopta.html" onclick="closeMenu()">🐕 Adopta</a>
     <a href="pasea.html" onclick="closeMenu()">🚶 Pasea un Perrito</a>
@@ -59,11 +285,86 @@
     <a href="#voluntario" onclick="closeMenu()">👥 Voluntario</a>
     <a href="#educacion" onclick="closeMenu()">📚 Educación</a>
     <a href="Ley.html" onclick="closeMenu()">⚖️ Proyecto de Ley</a>
-    <a href="#colegas" onclick="closeMenu()">👨‍🤝‍👨 Colegas</a>
+    <a href="colegas.html" onclick="closeMenu()">👨‍🤝‍👨 Colegas</a>
     <a href="#contactos" onclick="closeMenu()">📞 Contactos</a>
   </nav>
 
-  <!-- PUBLICIDADES FLOTANTES (Se muestran aleatoriamente) -->
+  <!-- BOTÓN EXPANDIBLE DE NAVEGACIÓN SECUNDARIA -->
+  <div class="nav-expandable">
+    <button class="expand-btn" id="expandBtn" onclick="toggleExpandMenu()">
+      <span id="expandIcon">➕</span>
+    </button>
+    <div class="nav-menu-expandable" id="expandMenu">
+      <div class="nav-title">Más Páginas</div>
+      
+      <!-- Adoptar y Rescate -->
+      <a href="adopta.html" title="Adopciones disponibles">
+        <span>🏠</span> Adopta un Rescatado
+      </a>
+      
+      <!-- Apadrina -->
+      <a href="apadrina.html" title="Programa de padrinos">
+        <span>💝</span> Apadrina
+      </a>
+      
+      <!-- Dona -->
+      <a href="dona.html" title="Haz una donación">
+        <span>💰</span> Dona
+      </a>
+      
+      <!-- Educación -->
+      <a href="educacion.html" title="Recursos educativos">
+        <span>📚</span> Educación Animal
+      </a>
+      
+      <!-- Investigaciones -->
+      <a href="investigaciones.html" title="Datos y estudios">
+        <span>📊</span> Investigaciones
+      </a>
+      
+      <!-- Objetivos -->
+      <a href="objetivos.html" title="Nuestros objetivos">
+        <span>🎯</span> Objetivos
+      </a>
+      
+      <!-- Visión -->
+      <a href="vision.html" title="Nuestra visión">
+        <span>🔮</span> Visión
+      </a>
+      
+      <!-- Voluntariado -->
+      <a href="voluntariado.html" title="Sé voluntario">
+        <span>👥</span> Voluntariado
+      </a>
+      
+      <!-- Contactos Veterinarios -->
+      <a href="contactos.html" title="Contactos veterinarios">
+        <span>🏥</span> Vets Autorizados
+      </a>
+      
+      <!-- Historias de Éxito -->
+      <a href="historias.html" title="Historias inspiradoras">
+        <span>✨</span> Historias
+      </a>
+      
+      <!-- Proyecto de Ley -->
+      <a href="Ley.html" title="Proyecto de ley popular">
+        <span>⚖️</span> Proyecto de Ley
+      </a>
+      
+      <!-- Colegas -->
+      <a href="colegas.html" title="Conoce nuestro equipo">
+        <span>👫</span> Colegas
+      </a>
+
+      <!-- WhatsApp General -->
+      <a href="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw" target="_blank" title="Únete a nuestro grupo">
+        <span>💬</span> Grupo WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- PUBLICIDADES FLOTANTES -->
   <div class="ad-banner" id="ad1" onclick="window.open(this.dataset.link, '_blank')" data-link="https://chat.whatsapp.com/JtsS9f5BQiUAZxWPaIq4Zw">
     <button class="ad-close" onclick="event.stopPropagation(); this.parentElement.style.display='none';">✕</button>
     📋 Firma la petición popular a favor de nuestros hermanos sin voz
@@ -215,7 +516,7 @@
         <div class="priority-card-icon">📜</div>
         <h3>Ley de Protección Animal</h3>
         <p>Iniciativa popular por una ley más fuerte que proteja a animales de maltrato, abandono y explotación.</p>
-        <a href="ley-popular.html" class="btn-large btn-primary" style="display: inline-block; margin-top: 1rem;">Leer Proyecto</a>
+        <a href="Ley.html" class="btn-large btn-primary" style="display: inline-block; margin-top: 1rem;">Leer Proyecto</a>
       </div>
 
       <div class="priority-card">
@@ -286,11 +587,11 @@
       <div class="footer-section">
         <h3>🔗 Enlaces Rápidos</h3>
         <ul>
-          <li><a href="#adopta">Adoptar</a></li>
-          <li><a href="#pasea">Pasear</a></li>
-          <li><a href="#denuncia">Denunciar</a></li>
-          <li><a href="#educacion">Educación</a></li>
-          <li><a href="#ley">Proyecto de Ley</a></li>
+          <li><a href="adopta.html">Adoptar</a></li>
+          <li><a href="pasea.html">Pasear</a></li>
+          <li><a href="denuncias.html">Denunciar</a></li>
+          <li><a href="educacion.html">Educación</a></li>
+          <li><a href="Ley.html">Proyecto de Ley</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -378,7 +679,60 @@
       }, 3500);
     });
 
-    // ======== NAVEGACIÓN ========
+    // ======== ROTACIÓN ALEATORIA DE IMÁGENES DE FONDO ========
+    function rotateBackgroundImages() {
+      const bgImages = document.querySelectorAll('.bg-image');
+      const imageUrls = [
+        'https://scontent.fsla3-1.fna.fbcdn.net/v/t39.30808-6/514087596_122106257072923253_210501417052009929_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c',
+        'https://scontent.fsla4-1.fna.fbcdn.net/v/t51.82787-15/518187405_17848977327511986_6537367668987455863_n.webp?stp=dst-jpg_tt6&_nc_cat=106&ccb=1-7',
+        'https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/518812046_122116830020923253_7009021312382308129_n.jpg?_nc_cat=104&ccb=1-7',
+        'https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/524425808_122120214506923253_5847994989405642142_n.jpg?_nc_cat=106&ccb=1-7',
+        'https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/571259938_122140375496923253_8206637298352341022_n.jpg?_nc_cat=104&ccb=1-7',
+        'https://scontent.fsla3-1.fna.fbcdn.net/v/t39.30808-6/565115548_122138801330923253_2539095965969184303_n.jpg?_nc_cat=102&ccb=1-7',
+        'https://scontent.fsla3-1.fna.fbcdn.net/v/t39.30808-6/565346010_122138799938923253_6851328001201353240_n.jpg?_nc_cat=111&ccb=1-7',
+        'https://scontent.fsla4-1.fna.fbcdn.net/v/t39.30808-6/564615117_122138793758923253_9120008130746448284_n.jpg?_nc_cat=105&ccb=1-7'
+      ];
+
+      setInterval(() => {
+        bgImages.forEach(img => {
+          const randomUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+          img.style.backgroundImage = `url('${randomUrl}')`;
+          img.style.opacity = '0.08';
+          
+          setTimeout(() => {
+            img.style.opacity = '0.22';
+          }, 400);
+        });
+      }, 8000);
+    }
+
+    rotateBackgroundImages();
+
+    // ======== NAVEGACIÓN EXPANDIBLE ========
+    function toggleExpandMenu() {
+      const expandBtn = document.getElementById('expandBtn');
+      const expandMenu = document.getElementById('expandMenu');
+      const expandIcon = document.getElementById('expandIcon');
+      
+      expandBtn.classList.toggle('active');
+      expandMenu.classList.toggle('active');
+      
+      expandIcon.textContent = expandBtn.classList.contains('active') ? '✕' : '➕';
+    }
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      const expandMenu = document.getElementById('expandMenu');
+      const expandBtn = document.getElementById('expandBtn');
+      
+      if (!expandMenu.contains(e.target) && !expandBtn.contains(e.target)) {
+        expandMenu.classList.remove('active');
+        expandBtn.classList.remove('active');
+        document.getElementById('expandIcon').textContent = '➕';
+      }
+    });
+
+    // ======== NAVEGACIÓN PRINCIPAL ========
     function toggleMenu() {
       const nav = document.getElementById('mainNav');
       const toggle = document.getElementById('menuToggle');
@@ -410,15 +764,6 @@
       });
     };
 
-    // ======== SCROLL SUAVE ========
-    function scrollTo(elementId) {
-      const element = document.getElementById(elementId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        closeMenu();
-      }
-    }
-
     // ======== BACK TO TOP ========
     const backToTopBtn = document.getElementById('backToTop');
     window.addEventListener('scroll', () => {
@@ -440,10 +785,9 @@
       
       ads.forEach((adId, index) => {
         const ad = document.getElementById(adId);
-        if (ad && Math.random() > 0.3) { // 70% de probabilidad de aparecer
+        if (ad && Math.random() > 0.3) {
           ad.className = `ad-banner ${positions[index]}`;
           ad.style.display = 'block';
-          // Rotamos los anuncios cada 8 segundos
           setInterval(() => {
             if (ad.style.display !== 'none') {
               ad.style.opacity = '0.3';
@@ -482,14 +826,13 @@
           url: url
         });
       } else {
-        // Fallback: copiar al portapapeles
         const mensaje = `${text}\n\n${url}`;
         navigator.clipboard.writeText(mensaje);
         alert('Mensaje copiado al portapapeles. ¡Comparte en tus redes!');
       }
     }
 
-    // ======== EFECTO DE ENTRADA PARA ELEMENTOS ========
+    // ======== EFECTO DE ENTRADA ========
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -511,11 +854,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
